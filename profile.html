@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -20,7 +27,7 @@
       <a class="nav-link" href="home.html">Back</a>
     </nav>
     <div>
-    <form action="/action_page.php">
+    <form id="form" action="/action_page.php">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="John"><br>
   <label for="lname">Last name:</label><br>
@@ -28,6 +35,41 @@
   <input type="submit" value="Submit">
    </form> 
       </div>
+    
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDxDmURZ1b--GsY8YQiBZmBH7NFWPcL6so",
+    authDomain: "friendlychat-97cc4.firebaseapp.com",
+    databaseURL: "https://friendlychat-97cc4.firebaseio.com",
+    projectId: "friendlychat-97cc4",
+    storageBucket: "friendlychat-97cc4.appspot.com",
+    messagingSenderId: "456348780716",
+    appId: "1:456348780716:web:3d719c72ad7c5c658bb709"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+   
+      document.getElementById("form").addEventListener("submit",(e)=>{
+      var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        e.preventDefault();
+        createUser(fname,lname);
+        form.reset();
+      });
+      
+   function createUser(fname,lname){
+   var user={
+   fname: fname,
+     lname: lname
+   }
+   
+   let db=firebase.database().ref("/");
+   db.set(user);
+   }
+</script>
+    
+    
     <div>
           <div class="card">
             <div class="card-header">
