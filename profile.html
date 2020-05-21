@@ -38,6 +38,9 @@
    </form> 
       </div>
     
+    <div class="col-md-6" id="cardSection">
+      </div>
+    
     <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -51,6 +54,10 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  
+  var d=new.Date();
+  var t=d.getTime();
+  var counter=t;
    
       document.getElementById("form").addEventListener("submit",(e)=>{
       var fname=document.getElementById("fname").value;
@@ -61,14 +68,36 @@
       });
       
    function createUser(fname,lname){
+   counter+=1;
    var user={
    fname: fname,
+     id:counter,
      lname: lname
    }
    
-   let db=firebase.database().ref("/");
+   let db=firebase.database().ref("/"+counter);
    db.set(user);
+     
+   document.getElementById("cardSection").innerHTML='';
+     readuser();
    }
+      
+      
+function readUser(){
+  var user=firebase.database().ref("/");
+  user.on("child_added",function(data){
+  var userValue=data.val();
+  console.log(userValue);
+    
+  document.getElementById("cardSection").innerHTML+='
+    <div class="card mb 3">
+      <div class="card-body">
+        <h5 class="card-title">${userValue.fname}</h5>
+        <p class="card-text">${userValue.lname}</p>
+    </div>
+    </div>
+    '
+  });
 </script>
     
     
