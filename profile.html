@@ -195,6 +195,29 @@ document.getElementById("firstSection").innerHTML=`
 };
       
       
+function updateUser2(id,fname,lname){
+var userUpdated={
+   fname: fname,
+     id:id,
+     lname: lname
+   }
+   
+   let db=firebase.database().ref("/"+id);
+   db.set(userUpdated);
+  
+  document.getElementById("cardSection").innerHTML='';
+  readUser();
+  reset();
+};
+      
+function deleteUser(id){
+   var user=firebase.database().ref("/"+id);
+   user.remove();
+   reset();
+  
+  document.getElementById("cardSection").innerHTML='';
+  readUser();
+};
       
       
 </script>
