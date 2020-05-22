@@ -118,7 +118,7 @@ function readUser(){
         <h5 class="card-title">${userValue.fname}</h5>
         <p class="card-text">${userValue.lname}</p>
         <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')"> Edit User</button>
-        <button type="submit" style="color:white" class="btn btn-danger" onclick="deleteUser(${userValue.id})"> Delete User</button> 
+        <button type="submit" style="color:white" class="btn btn-danger" onclick="deleteUser(${userValue.id})"><i class="fas fa-trash-alt"></i> Delete User</button> 
     </div>
     </div>
     `
