@@ -28,7 +28,7 @@
     <nav class="navbar navbar-light bg-light">
       <a class="nav-link" href="home.html">Back</a>
     </nav>
-    <div>
+<!--     <div>
     <form id="form" action="/action_page.php">
   <label for="fname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="John"><br>
@@ -36,10 +36,33 @@
   <input type="text" id="lname" name="lname" value="Doe"><br><br>
   <input type="submit" value="Submit">
    </form> 
+      </div> -->
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6" id="firstSection">
+    <form class="border p-4 mb-4" id="form">
+      
+      <div class="form-group">
+      <label>fname</label>
+      <input type="text" class="form control" id="fname" placeholder="Enter fname">
       </div>
-    
-    <div class="col-md-6" id="cardSection">
+      
+      <div class="form-group">
+      <label>lname</label>
+      <input type="text" class="form control" id="lname" placeholder="Enter lname">
       </div>
+      
+      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+      </form>
+      
+      
+    </div>
+    <div class="col-md-6" id="cardSection"></div>
+    </div>
+    </div>  
     
     <script>
   // Your web app's Firebase configuration
