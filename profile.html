@@ -124,6 +124,79 @@ function readUser(){
     `
   });
 };
+      
+      
+function reset(){
+document.getElementById("firstSection").innerHTML=`
+ <form class="border p-4 mb-4" id="form">
+      
+      <div class="form-group">
+      <label>fname</label>
+      <input type="text" class="form control" id="fname" placeholder="Enter fname">
+      </div>
+      
+      <div class="form-group">
+      <label>lname</label>
+      <input type="text" class="form control" id="lname" placeholder="Enter lname">
+      </div>
+      
+      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+      </form>
+`;
+    document.getElementById("form").addEventListener("submit",(e)=>{
+      var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        e.preventDefault();
+        createUser(fname,lname);
+        form.reset();
+      });  
+};
+      
+      
+      
+      
+function updateUser(id,fname,lname){
+document.getElementById("firstSection").innerHTML=`
+ <form class="border p-4 mb-4" id="form2">
+      
+      <div class="form-group">
+      <label>fname</label>
+      <input type="text" class="form control" id="fname" placeholder="Enter fname">
+      </div>
+      
+      <div class="form-group">
+      <label>lname</label>
+      <input type="text" class="form control" id="lname" placeholder="Enter lname">
+      </div>
+      
+      <button style="display: none" id="button1" class="btn btn-primary">Add User</button>
+      <button type="submit" style="display: inline-block" id="button2" class="btn btn-success">Update User</button>
+      <button style="display: inline-block" id="button3" class="btn btn-danger">Cancel</button>
+      
+      </form>
+`;
+    document.getElementById("form2").addEventListener("submit",(e)=>{
+        e.preventDefault();
+      });  
+  
+     document.getElementById("button3").addEventListener("click",(e)=>{
+        reset();
+      }); 
+  
+  document.getElementById("button2").addEventListener("click",(e)=>{
+        updateUser2(id,document.getElementById("fname").value,document.getElementById("lname").value);
+      }); 
+  
+  document.getElementById("fname").value=fname;
+  document.getElementById("lname").value=lname;
+};
+      
+      
+      
+      
 </script>
     
     
