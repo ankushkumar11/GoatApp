@@ -89,14 +89,14 @@ function readUser(){
   var userValue=data.val();
   console.log(userValue);
     
-  document.getElementById("cardSection").innerHTML+='
+  document.getElementById("cardSection").innerHTML+=`
     <div class="card mb 3">
       <div class="card-body">
         <h5 class="card-title">${userValue.fname}</h5>
         <p class="card-text">${userValue.lname}</p>
     </div>
     </div>
-    '
+    `
   });
 </script>
     
