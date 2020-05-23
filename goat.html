@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    .btn-floating-container {
+        right: 50px;
+        bottom: 50px;
+        position: fixed;
+    }
+
+    .btn-floating {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(245, 245, 245, 0.075);
+        text-align: center;
+        padding: 0px;
+        font-size: 24px;
+    }
+    </style>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body onload="readUser()">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-light bg-light">
+      <a class="nav-link" href="home.html">Back</a>
+    </nav>
+<!--     <div>
+    <form id="form" action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+   </form> 
+      </div> -->
+    <div class="container">
+    <div class="row">
+<!--     <div class="col-md-6" id="firstSection">
+    <form class="border p-4 mb-4" id="form">
+      
+      <div class="form-group">
+      <label>fname</label>
+      <input type="text" class="form control" id="fname" placeholder="Enter fname">
+      </div>
+      
+      <div class="form-group">
+      <label>lname</label>
+      <input type="text" class="form control" id="lname" placeholder="Enter lname">
+      </div>
+      
+      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+      </form>
+      
+      
+    </div> -->
+    <div class="col-md-6" id="cardSection"></div>
+      
+       <div class="btn-floating-container">
+        
+<!--        <button style='font-size:24px;color:blue'><i class='fas fa-plus'></i></button> -->
+       <button type="button" style='font-size:24px;color:blue' data-toggle="modal" data-target="#exampleModal"><i class='fas fa-plus'></i></button>
+       
+    </div>
+      
+<!--       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add User</button> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">First name:</label>
+            <input type="text" class="form-control" id="faname">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Last name:</label>
+            <input type="text" class="form-control" id="laname">
+            <div class="modal-footer">
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addUser()">Add User</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    </div>
+    </div>  
+    
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDxDmURZ1b--GsY8YQiBZmBH7NFWPcL6so",
+    authDomain: "friendlychat-97cc4.firebaseapp.com",
+    databaseURL: "https://friendlychat-97cc4.firebaseio.com",
+    projectId: "friendlychat-97cc4",
+    storageBucket: "friendlychat-97cc4.appspot.com",
+    messagingSenderId: "456348780716",
+    appId: "1:456348780716:web:3d719c72ad7c5c658bb709"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  var d=new Date();
+  var t=d.getTime();
+  var counter=t;
+   
+//       function addUser(){
+//       document.getElementById("form").addEventListener("submit",(e)=>{
+//       var fname=document.getElementById("fname").value;
+//         console.log("========fname=====");
+//         console.log(fname);
+//         var lname=document.getElementById("lname").value;
+//         e.preventDefault();
+//         createUser(fname,lname);
+//         form.reset();
+//       });
+//       };
+      
+      
+         function addUser(){
+           var fname=document.getElementById("faname").value;
+           var lname=document.getElementById("laname").value;
+        createUser(fname,lname);
+        form.reset();
+      };
+      
+   function createUser(fname,lname){
+   counter+=1;
+   var user={
+   fname: fname,
+     id:counter,
+     lname: lname
+   }
+   
+        console.log("========user=====");
+        console.log(user);
+     
+   let db=firebase.database().ref("/"+counter);
+   db.set(user);
+     
+   document.getElementById("cardSection").innerHTML='';
+     readUser();
+   }
+      
+      
+function readUser(){
+  var user=firebase.database().ref("/");
+  user.on("child_added",function(data){
+  var userValue=data.val();
+  console.log(userValue);
+    
+  document.getElementById("cardSection").innerHTML+=`
+    <div class="card mb 3">
+      <div class="card-body">
+        <h5 class="card-title">${userValue.fname}</h5>
+        <p class="card-text">${userValue.lname}</p>
+        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delUser(${userValue.id})">Delete User</button> 
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form3">
+         <p>Are you sure?</p>
+           <button type="submit" style="display: inline-block" id="button3" data-dismiss="modal" class="btn btn-success">Yes</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+           </div>
+        </form>
+      </div>
+     </div>
+    </div>
+
+
+
+
+
+
+
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')" data-toggle="modal" data-target="#editModal">Update User</button>
+
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Update User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form2">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">First name:</label>
+            <input type="text" class="form-control" id="fname">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Last name:</label>
+            <input type="text" class="form-control" id="lname">
+            <div class="modal-footer">
+           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update User</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    </div>
+    </div>  
+
+
+
+    </div>
+    </div>
+    `
+  });
+};
+      
+      
+// function reset(){
+// document.getElementById("firstSection").innerHTML=`
+//  <form class="border p-4 mb-4" id="form">
+      
+//       <div class="form-group">
+//       <label>fname</label>
+//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
+//       </div>
+      
+//       <div class="form-group">
+//       <label>lname</label>
+//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
+//       </div>
+      
+//       <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+//       <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+//       <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+//       </form>
+// `;
+//     document.getElementById("form").addEventListener("submit",(e)=>{
+//       var fname=document.getElementById("fname").value;
+//         var lname=document.getElementById("lname").value;
+//         e.preventDefault();
+//         createUser(fname,lname);
+//         form.reset();
+//       });  
+// };
+      
+      
+      
+      
+function updateUser(id,fname,lname){
+// document.getElementById("firstSection").innerHTML=`
+//  <form class="border p-4 mb-4" id="form2">
+      
+//       <div class="form-group">
+//       <label>fname</label>
+//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
+//       </div>
+      
+//       <div class="form-group">
+//       <label>lname</label>
+//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
+//       </div>
+      
+//       <button style="display: none" id="button1" class="btn btn-primary">Add User</button>
+//       <button type="submit" style="display: inline-block" id="button2" class="btn btn-success">Update User</button>
+//       <button style="display: inline-block" id="button3" class="btn btn-danger">Cancel</button>
+      
+//       </form>
+// `;
+    document.getElementById("form2").addEventListener("submit",(e)=>{
+        e.preventDefault();
+      });  
+  
+//      document.getElementById("button3").addEventListener("click",(e)=>{
+//         reset();
+//       }); 
+  
+  document.getElementById("button2").addEventListener("click",(e)=>{
+        updateUser2(id,document.getElementById("fname").value,document.getElementById("lname").value);
+      }); 
+  
+  document.getElementById("fname").value=fname;
+  document.getElementById("lname").value=lname;
+};
+      
+      
+function updateUser2(id,fname,lname){
+var userUpdated={
+   fname: fname,
+     id:id,
+     lname: lname
+   }
+   
+   let db=firebase.database().ref("/"+id);
+   db.set(userUpdated);
+  
+  document.getElementById("cardSection").innerHTML='';
+  readUser();
+//   reset();
+};
+      
+  
+function delUser(id){
+   document.getElementById("button3").addEventListener("click",(e)=>{
+        deleteUser(id);
+      }); 
+};
+      
+function deleteUser(id){
+   var user=firebase.database().ref("/"+id);
+   user.remove();
+  
+  document.getElementById("cardSection").innerHTML='';
+  readUser();
+};
+      
+      
+</script>
+    
+
+  </body>
+</html>
