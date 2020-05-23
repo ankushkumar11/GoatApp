@@ -62,7 +62,7 @@
     </div> -->
     <div class="col-md-6" id="cardSection"></div>
       
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add User</button>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add User</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -148,8 +148,44 @@ function readUser(){
       <div class="card-body">
         <h5 class="card-title">${userValue.fname}</h5>
         <p class="card-text">${userValue.lname}</p>
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')"> Edit User</button>
+//         <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')"> Edit User</button>
         <button type="submit" style="color:white" class="btn btn-danger" onclick="deleteUser(${userValue.id})"><i class="fas fa-trash-alt"></i> Delete User</button> 
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')" data-toggle="modal" data-target="#editModal"> User</button>
+
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">New User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form2">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">First name:</label>
+            <input type="text" class="form-control" id="fname">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Last name:</label>
+            <input type="text" class="form-control" id="lname">
+            <div class="modal-footer">
+           <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    </div>
+    </div>  
+
+
+
     </div>
     </div>
     `
@@ -157,34 +193,34 @@ function readUser(){
 };
       
       
-function reset(){
-document.getElementById("firstSection").innerHTML=`
- <form class="border p-4 mb-4" id="form">
+// function reset(){
+// document.getElementById("firstSection").innerHTML=`
+//  <form class="border p-4 mb-4" id="form">
       
-      <div class="form-group">
-      <label>fname</label>
-      <input type="text" class="form control" id="fname" placeholder="Enter fname">
-      </div>
+//       <div class="form-group">
+//       <label>fname</label>
+//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
+//       </div>
       
-      <div class="form-group">
-      <label>lname</label>
-      <input type="text" class="form control" id="lname" placeholder="Enter lname">
-      </div>
+//       <div class="form-group">
+//       <label>lname</label>
+//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
+//       </div>
       
-      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
-      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
-      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+//       <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+//       <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+//       <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
       
-      </form>
-`;
-    document.getElementById("form").addEventListener("submit",(e)=>{
-      var fname=document.getElementById("fname").value;
-        var lname=document.getElementById("lname").value;
-        e.preventDefault();
-        createUser(fname,lname);
-        form.reset();
-      });  
-};
+//       </form>
+// `;
+//     document.getElementById("form").addEventListener("submit",(e)=>{
+//       var fname=document.getElementById("fname").value;
+//         var lname=document.getElementById("lname").value;
+//         e.preventDefault();
+//         createUser(fname,lname);
+//         form.reset();
+//       });  
+// };
       
       
       
@@ -213,9 +249,9 @@ document.getElementById("firstSection").innerHTML=`
         e.preventDefault();
       });  
   
-     document.getElementById("button3").addEventListener("click",(e)=>{
-        reset();
-      }); 
+//      document.getElementById("button3").addEventListener("click",(e)=>{
+//         reset();
+//       }); 
   
   document.getElementById("button2").addEventListener("click",(e)=>{
         updateUser2(id,document.getElementById("fname").value,document.getElementById("lname").value);
@@ -238,7 +274,7 @@ var userUpdated={
   
   document.getElementById("cardSection").innerHTML='';
   readUser();
-  reset();
+//   reset();
 };
       
 function deleteUser(id){
