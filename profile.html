@@ -148,9 +148,8 @@ function readUser(){
       <div class="card-body">
         <h5 class="card-title">${userValue.fname}</h5>
         <p class="card-text">${userValue.lname}</p>
-//         <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')"> Edit User</button>
         <button type="submit" style="color:white" class="btn btn-danger" onclick="deleteUser(${userValue.id})"><i class="fas fa-trash-alt"></i> Delete User</button> 
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')" data-toggle="modal" data-target="#editModal"> User</button>
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')" data-toggle="modal" data-target="#editModal">Update User</button>
 
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
