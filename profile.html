@@ -115,6 +115,8 @@
    
       document.getElementById("form").addEventListener("submit",(e)=>{
       var fname=document.getElementById("fname").value;
+        console.log("========fname=====");
+        console.log(fname);
         var lname=document.getElementById("lname").value;
         e.preventDefault();
         createUser(fname,lname);
@@ -129,6 +131,9 @@
      lname: lname
    }
    
+        console.log("========user=====");
+        console.log(user);
+     
    let db=firebase.database().ref("/"+counter);
    db.set(user);
      
