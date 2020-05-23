@@ -83,7 +83,7 @@
             <label for="message-text" class="col-form-label">Last name:</label>
             <input type="text" class="form-control" id="lname">
             <div class="modal-footer">
-           <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addUser()">Add User</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
            </div>
         </form>
@@ -113,6 +113,7 @@
   var t=d.getTime();
   var counter=t;
    
+      function addUser(){
       document.getElementById("form").addEventListener("submit",(e)=>{
       var fname=document.getElementById("fname").value;
         console.log("========fname=====");
@@ -122,6 +123,7 @@
         createUser(fname,lname);
         form.reset();
       });
+      };
       
    function createUser(fname,lname){
    counter+=1;
