@@ -491,23 +491,26 @@ function readGoat(){
   document.getElementById("cardSection").innerHTML+=`
     <div class="card mb 3">
       <div class="card-body">
+<h4><b>GOAT GENERAL DETAILS</b></h4>
         <h5 class="card-title">Tag Number: ${userValue.tagnumber}</h5>
 <p class="card-text">DOB: ${userValue.dob}</p>
 <p class="card-text">Purchase Cost (in Rs.): ${userValue.cp}</p>
-<p class="card-text">${userValue.gender}</p>
-<p class="card-text">${userValue.weight}</p>
-<p class="card-text">${userValue.wd}</p>
-<p class="card-text">${userValue.iiw}</p>
-<p class="card-text">${userValue.age}</p>
-<p class="card-text">${userValue.bid}</p>
-<p class="card-text">${userValue.mothertagnumber}</p>
-<p class="card-text">${userValue.pm}</p>
-<p class="card-text">${userValue.dd}</p>
-<p class="card-text">${userValue.babyoneweight}</p>
-<p class="card-text">${userValue.babytwoweight}</p>
-<p class="card-text">${userValue.babythreeweight}</p>
-<p class="card-text">${userValue.nobm}</p>
-<p class="card-text">${userValue.nmma}</p>
+<p class="card-text">Gender: ${userValue.gender}</p>
+<p class="card-text">Weight (in kg): ${userValue.weight}</p>
+<p class="card-text">weighting date: ${userValue.wd}</p>
+<p class="card-text">% increase in weight: ${userValue.iiw}</p>
+<p class="card-text">Age (in months): ${userValue.age}</p>
+<p class="card-text">Bread/Identification details: ${userValue.bid}</p>
+<p class="card-text">Mother Tag Number: ${userValue.mothertagnumber}</p>
+<p class="card-text">Pregnancy month: ${userValue.pm}</p>
+<h4><b>PRODUCTION DETAILS</b></h4>
+<p class="card-text">Delivery date: ${userValue.dd}</p>
+<p class="card-text">1st Baby weight: (in kg)${userValue.babyoneweight}</p>
+<p class="card-text">2nd Baby weight: (in kg)${userValue.babytwoweight}</p>
+<p class="card-text">3rd Baby weight: (in kg)${userValue.babythreeweight}</p>
+<p class="card-text">Number of baby mortality: ${userValue.nobm}</p>
+<p class="card-text">Next mating month alert: ${userValue.nmma}</p>
+<h4><b>VACCINATION DETAILS</b></h4>
 <p class="card-text">${userValue.vaccine}</p>
 <p class="card-text">${userValue.vd}</p>
 <p class="card-text">${userValue.nvd}</p>
