@@ -511,16 +511,18 @@ function readGoat(){
 <p class="card-text">Number of baby mortality: ${userValue.nobm}</p>
 <p class="card-text">Next mating month alert: ${userValue.nmma}</p>
 <h4><b>VACCINATION DETAILS</b></h4>
-<p class="card-text">${userValue.vaccine}</p>
-<p class="card-text">${userValue.vd}</p>
-<p class="card-text">${userValue.nvd}</p>
-<p class="card-text">${userValue.wn}</p>
-<p class="card-text">${userValue.ddd}</p>
-<p class="card-text">${userValue.ndd}</p>
-<p class="card-text">${userValue.rejectable}</p>
-<p class="card-text">${userValue.sfs}</p>
-<p class="card-text">${userValue.sale}</p>
-<p class="card-text">${userValue.died}</p><p class="card-text">${userValue.lname}</p>
+<p class="card-text">Vaccine: ${userValue.vaccine}</p>
+<p class="card-text">vaccination date: ${userValue.vd}</p>
+<p class="card-text">Next vaccination date: ${userValue.nvd}</p>
+<h4><b>DEWORMING DETAILS</b></h4>
+<p class="card-text">Wormicide Name: ${userValue.wn}</p>
+<p class="card-text">Dosing date: ${userValue.ddd}</p>
+<p class="card-text">Next Dosing date(every 4 months): ${userValue.ndd}</p>
+<h4><b>DEPOSABLE STATUS</b></h4>
+<p class="card-text">Rejectable: ${userValue.rejectable}</p>
+<p class="card-text">Suitable for Sale: ${userValue.sfs}</p>
+<p class="card-text">Sale Details: ${userValue.sale}</p>
+<p class="card-text">Died Details: ${userValue.died}</p>
         <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delUser(${userValue.id})">Delete User</button> 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -570,7 +572,7 @@ function readGoat(){
             <label for="message-text" class="col-form-label">Last name:</label>
             <input type="text" class="form-control" id="lname">
             <div class="modal-footer">
-           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update User</button>
+           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update Goat</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
            </div>
         </form>
