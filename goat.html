@@ -523,7 +523,7 @@ function readGoat(){
 <p class="card-text">Suitable for Sale: ${userValue.sfs}</p>
 <p class="card-text">Sale Details: ${userValue.sale}</p>
 <p class="card-text">Died Details: ${userValue.died}</p>
-        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delUser(${userValue.id})">Delete User</button> 
+        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delGoat(${userValue.id})">Delete Goat</button> 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -550,7 +550,7 @@ function readGoat(){
 
 
 
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateUser(${userValue.id},'${userValue.fname}','${userValue.lname}')" data-toggle="modal" data-target="#editModal">Update User</button>
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.weight}','${userValue.wd}','${userValue.iiw}','${userValue.age}','${userValue.bid}','${userValue.mothertagnumber}','${userValue.pm}','${userValue.dd}','${userValue.babyoneweight}','${userValue.babytwoweight}','${userValue.babythreeweight}','${userValue.nobm}','${userValue.nmma}','${userValue.vaccine}','${userValue.vd}','${userValue.nvd}','${userValue.wn}','${userValue.ddd}','${userValue.ndd}','${userValue.rejectable}','${userValue.sfs}','${userValue.sale}','${userValue.died}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
 
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -625,7 +625,7 @@ function readGoat(){
       
       
       
-function updateUser(id,fname,lname){
+function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweiid,ght,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
 // document.getElementById("firstSection").innerHTML=`
 //  <form class="border p-4 mb-4" id="form2">
       
@@ -654,42 +654,92 @@ function updateUser(id,fname,lname){
 //       }); 
   
   document.getElementById("button2").addEventListener("click",(e)=>{
-        updateUser2(id,document.getElementById("fname").value,document.getElementById("lname").value);
+        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("age").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
       }); 
   
-  document.getElementById("fname").value=fname;
-  document.getElementById("lname").value=lname;
+document.getElementById("tagnumber").value=tagnumber;
+document.getElementById("dob").value=dob;
+document.getElementById("cp").value=cp;
+document.getElementById("gender").value=gender;
+document.getElementById("weight").value=weight;
+document.getElementById("wd").value=wd;
+document.getElementById("iiw").value=iiw;
+document.getElementById("age").value=age;
+document.getElementById("bid").value=bid;
+document.getElementById("mothertagnumber").value=mothertagnumber;
+document.getElementById("pm").value=pm;
+document.getElementById("dd").value=dd;
+document.getElementById("babyoneweight").value=babyoneweight;
+document.getElementById("babytwoweight").value=babytwoweight;
+document.getElementById("babythreeweight").value=babythreeweight;
+document.getElementById("nobm").value=nobm;
+document.getElementById("nmma").value=nmma;
+document.getElementById("vaccine").value=vaccine;
+document.getElementById("vd").value=vd;
+document.getElementById("nvd").value=nvd;
+document.getElementById("wn").value=wn;
+document.getElementById("ddd").value=ddd;
+document.getElementById("ndd").value=ndd;
+document.getElementById("rejectable").value=rejectable;
+document.getElementById("sfs").value=sfs;
+document.getElementById("sale").value=sale;
+document.getElementById("died").value=died;
 };
       
       
-function updateUser2(id,fname,lname){
-var userUpdated={
-   fname: fname,
+function updateGoat2(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweiid,ght,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+var goatUpdated={
      id:id,
-     lname: lname
+     tagnumber: tagnumber,
+dob: dob,
+cp: cp,
+gender: gender, 
+weight: weight,
+wd: wd,
+iiw: iiw,
+age: age,
+bid: bid,
+mothertagnumber: mothertagnumber,
+pm: pm,
+dd: dd,
+babyoneweight: babyoneweight,
+babytwoweight: babytwoweight,
+babythreeweight: babythreeweight,
+nobm: nobm,
+nmma: nmma,
+vaccine: vaccine,
+vd: vd,
+nvd: nvd,
+wn: wn,
+ddd: ddd,
+ndd: ndd,
+rejectable: rejectable,
+sfs: sfs,
+sale: sale,
+died: died
    }
    
    let db=firebase.database().ref("/"+id);
-   db.set(userUpdated);
+   db.set(goatUpdated);
   
   document.getElementById("cardSection").innerHTML='';
-  readUser();
+  readGoat();
 //   reset();
 };
       
   
-function delUser(id){
+function delGoat(id){
    document.getElementById("button3").addEventListener("click",(e)=>{
-        deleteUser(id);
+        deleteGoat(id);
       }); 
 };
       
-function deleteUser(id){
+function deleteGoat(id){
    var user=firebase.database().ref("/"+id);
    user.remove();
   
   document.getElementById("cardSection").innerHTML='';
-  readUser();
+  readGoat();
 };
       
       
