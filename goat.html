@@ -351,7 +351,7 @@
   </div>
 
 <div class="modal-footer">
-           <button type="submit" id="button1" class="btn btn-primary" onclick="addUser()">Add Goat</button>
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addGoat()">Add Goat</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 </div>
   
@@ -395,29 +395,79 @@
 //       };
       
       
-         function addUser(){
-           var fname=document.getElementById("faname").value;
-           var lname=document.getElementById("laname").value;
-        createUser(fname,lname);
+         function addGoat(){
+           var tagnumber=document.getElementById("tagnumber").value;
+var dob=document.getElementById("dob").value;
+var cp=document.getElementById("cp").value;
+var gender=document.getElementById("gender").value;
+var weight=document.getElementById("weight").value;
+var wd=document.getElementById("wd").value;
+var iiw=document.getElementById("iiw").value;
+var age=document.getElementById("age").value;
+var bid=document.getElementById("bid").value;
+var mothertagnumber=document.getElementById("mothertagnumber").value;
+var pm=document.getElementById("pm").value;
+var dd=document.getElementById("dd").value;
+var babyoneweight=document.getElementById("babyoneweight").value;
+var babytwoweight=document.getElementById("babytwoweight").value;
+var babythreeweight=document.getElementById("babythreeweight").value;
+var nobm=document.getElementById("nobm").value;
+var nmma=document.getElementById("nmma").value;
+var vaccine=document.getElementById("vaccine").value;
+var vd=document.getElementById("vd").value;
+var nvd=document.getElementById("nvd").value;
+var wn=document.getElementById("wn").value;
+var ddd=document.getElementById("ddd").value;
+var ndd=document.getElementById("ndd").value;
+var rejectable=document.getElementById("rejectable").value;
+var sfs=document.getElementById("sfs").value;
+var sale=document.getElementById("sale").value;
+var died=document.getElementById("died").value;
+        createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
         form.reset();
       };
       
-   function createUser(fname,lname){
+   function createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
    counter+=1;
-   var user={
-   fname: fname,
+   var goat={
      id:counter,
-     lname: lname
+     tagnumber: tagnumber,
+dob: dob,
+cp: cp,
+gender: gender, 
+weight: weight,
+wd: wd,
+iiw: iiw,
+age: age,
+bid: bid,
+mothertagnumber: mothertagnumber,
+pm: pm,
+dd: dd,
+babyoneweight: babyoneweight,
+babytwoweight: babytwoweight,
+babythreeweight: babythreeweight,
+nobm: nobm,
+nmma: nmma,
+vaccine: vaccine,
+vd: vd,
+nvd: nvd,
+wn: wn,
+ddd: ddd,
+ndd: ndd,
+rejectable: rejectable,
+sfs: sfs,
+sale: sale,
+died: died
    }
    
         console.log("========user=====");
-        console.log(user);
+        console.log(goat);
      
    let db=firebase.database().ref("/"+counter);
-   db.set(user);
+   db.set(goat);
      
-   document.getElementById("cardSection").innerHTML='';
-     readUser();
+//    document.getElementById("cardSection").innerHTML='';
+//      readUser();
    }
       
       
