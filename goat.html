@@ -115,7 +115,7 @@
            </div>
         </form> -->
         
-        <form id=form>
+        <form id="form">
 <b>GOAT GENERAL DETAILS</b>
 <br></br>
   <div class="form-group row">
@@ -563,19 +563,258 @@ function readGoat(){
         </button>
       </div>
       <div class="modal-body">
-        <form id="form2">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">First name:</label>
-            <input type="text" class="form-control" id="fname">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Last name:</label>
-            <input type="text" class="form-control" id="lname">
-            <div class="modal-footer">
-           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update Goat</button>
+       <form id="form2">
+<b>GOAT GENERAL DETAILS</b>
+<br></br>
+  <div class="form-group row">
+    <label for="tagnumber" class="col-sm-2 col-form-label">Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="tagnumber">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="dob" class="col-sm-2 col-form-label">DOB</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="dob">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="cp" class="col-sm-2 col-form-label">Purchase Cost (in Rs.)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="cp">
+    </div>
+  </div>
+  
+<!--    <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="btn-group" id="gender" data-toggle="buttons">
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="F">Female
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MA"> Male Andul
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MK"> Male Khassi
+   </label>
+</div>
+  </div> -->
+        
+ <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-10">
+  <select id="gender" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="weight" class="col-sm-2 col-form-label">Weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="weight">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="wd" class="col-sm-2 col-form-label">weighting date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="wd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="iiw" class="col-sm-2 col-form-label">% increase in weight</label>
+    <div class="col-sm-10">
+      <input type="number" min="0" max="1" step="0.01" class="form-control" id="iiw"/>
+    </div>
+  </div> 
+  
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label">Age (in months)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="age">
+    </div>
+   </div> 
+  
+  <div class="form-group row">
+    <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bid">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="mothertagnumber" class="col-sm-2 col-form-label">Mother Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="mothertagnumber">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="pm" class="col-sm-2 col-form-label">Pregnancy month</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="pm">
+    </div>
+   </div> 
+   
+<br></br>
+   <b>PRODUCTION DETAILS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="dd" class="col-sm-2 col-form-label">Delivery date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="dd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="babyoneweight" class="col-sm-2 col-form-label">1st Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babyoneweight">
+    </div>
+   </div> 
+
+
+  <div class="form-group row">
+    <label for="babytwoweight" class="col-sm-2 col-form-label">2nd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babytwoweight">
+    </div>
+   </div> 
+   
+     <div class="form-group row">
+    <label for="babythreeweight" class="col-sm-2 col-form-label">3rd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babythreeweight">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="nobm" class="col-sm-2 col-form-label">Number of baby mortality</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="nobm">
+    </div>
+   </div> 
+   
+  <div class="form-group row">
+    <label for="nmma" class="col-sm-2 col-form-label">Next mating month alert</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nmma">
+    </div>
+  </div>
+  
+<br></br>
+   <b>VACCINATION DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="vaccine" class="col-sm-2 col-form-label">Vaccine</label>
+    <div class="col-sm-10">
+  <select id="vaccine" class="form-control" name="vaccine">
+    <option value="et">ET(Half yearly)</option>
+    <option value="fmd">FMD(Half yearly)</option>
+    <option value="ppr">PPR(Yearly)</option>
+    <option value="pox">POX(Yearly)</option>
+  </select>
+    </div>
+  </div>
+  
+    <div class="form-group row">
+    <label for="vd" class="col-sm-2 col-form-label">vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="vd">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="nvd" class="col-sm-2 col-form-label">Next vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nvd">
+    </div>
+  </div>
+
+
+<br></br>
+   <b>DEWORMING DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="wn" class="col-sm-2 col-form-label">Wormicide Name</label>
+    <div class="col-sm-10">
+  <select id="wn" class="form-control" name="wn">
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="ddd" class="col-sm-2 col-form-label">Dosing date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ddd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="ndd" class="col-sm-2 col-form-label">Next Dosing date(every 4 months)</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ndd">
+    </div>
+  </div>
+  
+<br></br>
+   <b>DEPOSABLE STATUS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="rejectable" class="col-sm-2 col-form-label">Rejectable</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="rejectable">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="sfs" class="col-sm-2 col-form-label">Suitable for Sale</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sfs">
+    </div>
+  </div>
+  
+     <div class="form-group row">
+    <label for="sale" class="col-sm-2 col-form-label">Sale Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sale">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="died" class="col-sm-2 col-form-label">Died Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="died">
+    </div>
+  </div>
+
+<div class="modal-footer">
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addGoat()">Add Goat</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-           </div>
-        </form>
+</div>
+  
+</form>
       </div>
      
     </div>
