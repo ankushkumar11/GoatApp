@@ -435,7 +435,7 @@ var sfs=document.getElementById("sfs").value;
 var sale=document.getElementById("sale").value;
 var died=document.getElementById("died").value;
         createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
-//         form.reset();
+        form.reset();
       };
       
    function createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
@@ -471,18 +471,18 @@ sale: sale,
 died: died
    }
    
-        console.log("========user=====");
+        console.log("========goat=====");
         console.log(goat);
      
-//    let db=firebase.database().ref("/"+counter);
-//    db.set(goat);
+   let db=firebase.database().ref("/"+counter);
+   db.set(goat);
      
-//    document.getElementById("cardSection").innerHTML='';
-//      readUser();
+   document.getElementById("cardSection").innerHTML='';
+     readGoat();
    }
       
       
-function readUser(){
+function readGoat(){
   var user=firebase.database().ref("/");
   user.on("child_added",function(data){
   var userValue=data.val();
@@ -498,7 +498,7 @@ function readUser(){
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Delete User</h5>
+        <h5 class="modal-title" id="deleteModalLabel">Delete Goat</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
