@@ -435,7 +435,7 @@ var sfs=document.getElementById("sfsa").value;
 var sale=document.getElementById("salea").value;
 var died=document.getElementById("dieda").value;
         createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
-        form.reset();
+<!--         form.reset(); -->
       };
       
    function createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
@@ -474,11 +474,11 @@ died: died
         console.log("========goat=====");
         console.log(goat);
      
-   let db=firebase.database().ref("/"+counter);
+<!--    let db=firebase.database().ref("/"+counter);
    db.set(goat);
      
    document.getElementById("cardSection").innerHTML='';
-     readGoat();
+     readGoat(); -->
    }
       
       
