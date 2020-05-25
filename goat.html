@@ -491,8 +491,33 @@ function readGoat(){
   document.getElementById("cardSection").innerHTML+=`
     <div class="card mb 3">
       <div class="card-body">
-        <h5 class="card-title">${userValue.fname}</h5>
-        <p class="card-text">${userValue.lname}</p>
+        <h5 class="card-title">Tag Number: ${userValue.tagnumber}</h5>
+<p class="card-text">DOB: ${userValue.dob}</p>
+<p class="card-text">Purchase Cost (in Rs.): ${userValue.cp}</p>
+<p class="card-text">${userValue.gender}</p>
+<p class="card-text">${userValue.weight}</p>
+<p class="card-text">${userValue.wd}</p>
+<p class="card-text">${userValue.iiw}</p>
+<p class="card-text">${userValue.age}</p>
+<p class="card-text">${userValue.bid}</p>
+<p class="card-text">${userValue.mothertagnumber}</p>
+<p class="card-text">${userValue.pm}</p>
+<p class="card-text">${userValue.dd}</p>
+<p class="card-text">${userValue.babyoneweight}</p>
+<p class="card-text">${userValue.babytwoweight}</p>
+<p class="card-text">${userValue.babythreeweight}</p>
+<p class="card-text">${userValue.nobm}</p>
+<p class="card-text">${userValue.nmma}</p>
+<p class="card-text">${userValue.vaccine}</p>
+<p class="card-text">${userValue.vd}</p>
+<p class="card-text">${userValue.nvd}</p>
+<p class="card-text">${userValue.wn}</p>
+<p class="card-text">${userValue.ddd}</p>
+<p class="card-text">${userValue.ndd}</p>
+<p class="card-text">${userValue.rejectable}</p>
+<p class="card-text">${userValue.sfs}</p>
+<p class="card-text">${userValue.sale}</p>
+<p class="card-text">${userValue.died}</p><p class="card-text">${userValue.lname}</p>
         <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delUser(${userValue.id})">Delete User</button> 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
