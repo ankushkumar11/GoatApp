@@ -810,9 +810,8 @@ function readGoat(){
   </div>
 
 <div class="modal-footer">
-           <button type="submit" id="button1" class="btn btn-primary" onclick="addGoat()">Update Goat</button>
+           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update Goat</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-</div>
   
 </form>
       </div>
@@ -904,9 +903,9 @@ function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnu
 //         reset();
 //       }); 
   
-//   document.getElementById("button2").addEventListener("click",(e)=>{
-//         updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("age").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
-//       }); 
+  document.getElementById("button2").addEventListener("click",(e)=>{
+        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("age").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
+      }); 
   
 document.getElementById("tagnumber").value=tagnumber;
 document.getElementById("dob").value=dob;
