@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    .btn-floating-container {
+        right: 50px;
+        bottom: 50px;
+        position: fixed;
+    }
+
+    .btn-floating {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(245, 245, 245, 0.075);
+        text-align: center;
+        padding: 0px;
+        font-size: 24px;
+    }
+    </style>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body onload="readGoat()">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-light bg-light">
+<!--       <a class="nav-link" href="home.html">Back</a> -->
+    </nav>
+<!--     <div>
+    <form id="form" action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+   </form> 
+      </div> -->
+    <div class="container">
+    <div class="row">
+<!--     <div class="col-md-6" id="firstSection">
+    <form class="border p-4 mb-4" id="form">
+      
+      <div class="form-group">
+      <label>fname</label>
+      <input type="text" class="form control" id="fname" placeholder="Enter fname">
+      </div>
+      
+      <div class="form-group">
+      <label>lname</label>
+      <input type="text" class="form control" id="lname" placeholder="Enter lname">
+      </div>
+      
+      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+      </form>
+      
+      
+    </div> -->
+    <div class="col-md-6" id="cardSection"></div>
+      
+       <div class="btn-floating-container">
+        
+<!--        <button style='font-size:24px;color:blue'><i class='fas fa-plus'></i></button> -->
+       <button type="button" style='font-size:24px;color:blue' data-toggle="modal" data-target="#exampleModal"><i class='fas fa-plus'></i></button>
+       
+    </div>
+      
+<!--       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add User</button> -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Goat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!--         <form id="form">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">First name:</label>
+            <input type="text" class="form-control" id="faname">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Last name:</label>
+            <input type="text" class="form-control" id="laname">
+            <div class="modal-footer">
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addUser()">Add User</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+        </form> -->
+        
+        <form id="form">
+<b>GOAT GENERAL DETAILS</b>
+<br></br>
+  <div class="form-group row">
+    <label for="tagnumber" class="col-sm-2 col-form-label">Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="tagnumbera">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="dob" class="col-sm-2 col-form-label">DOB</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="doba">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="cp" class="col-sm-2 col-form-label">Purchase Cost (in Rs.)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="cpa">
+    </div>
+  </div>
+  
+<!--    <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="btn-group" id="gender" data-toggle="buttons">
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="F">Female
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MA"> Male Andul
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MK"> Male Khassi
+   </label>
+</div>
+  </div> -->
+        
+ <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-10">
+  <select id="gendera" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="weight" class="col-sm-2 col-form-label">Weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="weighta">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="wd" class="col-sm-2 col-form-label">weighting date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="wda">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="iiw" class="col-sm-2 col-form-label">% increase in weight</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="iiwa"/>
+    </div>
+  </div> 
+  
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label">Age (in months)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="agea">
+    </div>
+   </div> 
+  
+  <div class="form-group row">
+    <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bida">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="mothertagnumber" class="col-sm-2 col-form-label">Mother Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="mothertagnumbera">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="pm" class="col-sm-2 col-form-label">Pregnancy month</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="pma">
+    </div>
+   </div> 
+   
+<br></br>
+   <b>PRODUCTION DETAILS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="dd" class="col-sm-2 col-form-label">Delivery date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="dda">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="babyoneweight" class="col-sm-2 col-form-label">1st Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babyoneweighta">
+    </div>
+   </div> 
+
+
+  <div class="form-group row">
+    <label for="babytwoweight" class="col-sm-2 col-form-label">2nd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babytwoweighta">
+    </div>
+   </div> 
+   
+     <div class="form-group row">
+    <label for="babythreeweight" class="col-sm-2 col-form-label">3rd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babythreeweighta">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="nobm" class="col-sm-2 col-form-label">Number of baby mortality</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="nobma">
+    </div>
+   </div> 
+   
+  <div class="form-group row">
+    <label for="nmma" class="col-sm-2 col-form-label">Next mating month alert</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nmmaa">
+    </div>
+  </div>
+  
+<br></br>
+   <b>VACCINATION DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="vaccine" class="col-sm-2 col-form-label">Vaccine</label>
+    <div class="col-sm-10">
+  <select id="vaccinea" class="form-control" name="vaccine">
+    <option value="et">ET(Half yearly)</option>
+    <option value="fmd">FMD(Half yearly)</option>
+    <option value="ppr">PPR(Yearly)</option>
+    <option value="pox">POX(Yearly)</option>
+  </select>
+    </div>
+  </div>
+  
+    <div class="form-group row">
+    <label for="vd" class="col-sm-2 col-form-label">vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="vda">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="nvd" class="col-sm-2 col-form-label">Next vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nvda">
+    </div>
+  </div>
+
+
+<br></br>
+   <b>DEWORMING DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="wn" class="col-sm-2 col-form-label">Wormicide Name</label>
+    <div class="col-sm-10">
+  <select id="wna" class="form-control" name="wn">
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="ddd" class="col-sm-2 col-form-label">Dosing date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ddda">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="ndd" class="col-sm-2 col-form-label">Next Dosing date(every 4 months)</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ndda">
+    </div>
+  </div>
+  
+<br></br>
+   <b>DEPOSABLE STATUS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="rejectable" class="col-sm-2 col-form-label">Rejectable</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="rejectablea">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="sfs" class="col-sm-2 col-form-label">Suitable for Sale</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sfsa">
+    </div>
+  </div>
+  
+     <div class="form-group row">
+    <label for="sale" class="col-sm-2 col-form-label">Sale Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="salea">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="died" class="col-sm-2 col-form-label">Died Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="dieda">
+    </div>
+  </div>
+
+<div class="modal-footer">
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addGoat()">Add Goat</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
+  
+</form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    </div>
+    </div>  
+    
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDxDmURZ1b--GsY8YQiBZmBH7NFWPcL6so",
+    authDomain: "friendlychat-97cc4.firebaseapp.com",
+    databaseURL: "https://friendlychat-97cc4.firebaseio.com",
+    projectId: "friendlychat-97cc4",
+    storageBucket: "friendlychat-97cc4.appspot.com",
+    messagingSenderId: "456348780716",
+    appId: "1:456348780716:web:3d719c72ad7c5c658bb709"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  var d=new Date();
+  var t=d.getTime();
+  var counter=t;
+   
+//       function addUser(){
+//       document.getElementById("form").addEventListener("submit",(e)=>{
+//       var fname=document.getElementById("fname").value;
+//         console.log("========fname=====");
+//         console.log(fname);
+//         var lname=document.getElementById("lname").value;
+//         e.preventDefault();
+//         createUser(fname,lname);
+//         form.reset();
+//       });
+//       };
+      
+      
+         function addGoat(){
+           var tagnumber=document.getElementById("tagnumbera").value;
+var dob=document.getElementById("doba").value;
+var cp=document.getElementById("cpa").value;
+var gender=document.getElementById("gendera").value;
+var weight=document.getElementById("weighta").value;
+var wd=document.getElementById("wda").value;
+var iiw=document.getElementById("iiwa").value;
+var age=document.getElementById("agea").value;
+var bid=document.getElementById("bida").value;
+var mothertagnumber=document.getElementById("mothertagnumbera").value;
+var pm=document.getElementById("pma").value;
+var dd=document.getElementById("dda").value;
+var babyoneweight=document.getElementById("babyoneweighta").value;
+var babytwoweight=document.getElementById("babytwoweighta").value;
+var babythreeweight=document.getElementById("babythreeweighta").value;
+var nobm=document.getElementById("nobma").value;
+var nmma=document.getElementById("nmmaa").value;
+var vaccine=document.getElementById("vaccinea").value;
+var vd=document.getElementById("vda").value;
+var nvd=document.getElementById("nvda").value;
+var wn=document.getElementById("wna").value;
+var ddd=document.getElementById("ddda").value;
+var ndd=document.getElementById("ndda").value;
+var rejectable=document.getElementById("rejectablea").value;
+var sfs=document.getElementById("sfsa").value;
+var sale=document.getElementById("salea").value;
+var died=document.getElementById("dieda").value;
+        createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
+ form.reset();
+      };
+      
+   function createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+   counter+=1;
+   var goat={
+     id:counter,
+     tagnumber: tagnumber,
+dob: dob,
+cp: cp,
+gender: gender, 
+weight: weight,
+wd: wd,
+iiw: iiw,
+age: age,
+bid: bid,
+mothertagnumber: mothertagnumber,
+pm: pm,
+dd: dd,
+babyoneweight: babyoneweight,
+babytwoweight: babytwoweight,
+babythreeweight: babythreeweight,
+nobm: nobm,
+nmma: nmma,
+vaccine: vaccine,
+vd: vd,
+nvd: nvd,
+wn: wn,
+ddd: ddd,
+ndd: ndd,
+rejectable: rejectable,
+sfs: sfs,
+sale: sale,
+died: died
+   }
+   
+        console.log("========goat=====");
+        console.log(goat);
+     
+let db=firebase.database().ref("/"+counter);
+   db.set(goat);
+     
+   document.getElementById("cardSection").innerHTML='';
+     readGoat();
+   }
+      
+      
+function readGoat(){
+  var user=firebase.database().ref("/");
+  user.on("child_added",function(data){
+  var userValue=data.val();
+  console.log(userValue);
+    
+  document.getElementById("cardSection").innerHTML+=`
+    <div class="card mb 3">
+      <div class="card-body">
+<h4><b>GOAT GENERAL DETAILS</b></h4>
+        <h5 class="card-title">Tag Number: ${userValue.tagnumber}</h5>
+<p class="card-text">DOB: ${console.log(userValue.dob)}</p>
+<p class="card-text">Purchase Cost (in Rs.): ${userValue.cp}</p>
+<p class="card-text">Gender: ${userValue.gender}</p>
+<p class="card-text">Weight (in kg): ${userValue.weight}</p>
+<p class="card-text">weighting date: ${userValue.wd}</p>
+<p class="card-text">% increase in weight: ${userValue.iiw}</p>
+<p class="card-text">Age (in months): ${userValue.age}</p>
+<p class="card-text">Bread/Identification details: ${userValue.bid}</p>
+<p class="card-text">Mother Tag Number: ${userValue.mothertagnumber}</p>
+<p class="card-text">Pregnancy month: ${userValue.pm}</p>
+<h4><b>PRODUCTION DETAILS</b></h4>
+<p class="card-text">Delivery date: ${userValue.dd}</p>
+<p class="card-text">1st Baby weight: (in kg)${userValue.babyoneweight}</p>
+<p class="card-text">2nd Baby weight: (in kg)${userValue.babytwoweight}</p>
+<p class="card-text">3rd Baby weight: (in kg)${userValue.babythreeweight}</p>
+<p class="card-text">Number of baby mortality: ${userValue.nobm}</p>
+<p class="card-text">Next mating month alert: ${userValue.nmma}</p>
+<h4><b>VACCINATION DETAILS</b></h4>
+<p class="card-text">Vaccine: ${userValue.vaccine}</p>
+<p class="card-text">vaccination date: ${userValue.vd}</p>
+<p class="card-text">Next vaccination date: ${userValue.nvd}</p>
+<h4><b>DEWORMING DETAILS</b></h4>
+<p class="card-text">Wormicide Name: ${userValue.wn}</p>
+<p class="card-text">Dosing date: ${userValue.ddd}</p>
+<p class="card-text">Next Dosing date(every 4 months): ${userValue.ndd}</p>
+<h4><b>DEPOSABLE STATUS</b></h4>
+<p class="card-text">Rejectable: ${userValue.rejectable}</p>
+<p class="card-text">Suitable for Sale: ${userValue.sfs}</p>
+<p class="card-text">Sale Details: ${userValue.sale}</p>
+<p class="card-text">Died Details: ${userValue.died}</p>
+        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delGoat(${userValue.id})">Delete Goat</button> 
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Goat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="form3">
+         <p>Are you sure?</p>
+           <button type="submit" style="display: inline-block" id="button3" data-dismiss="modal" class="btn btn-success">Yes</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+           </div>
+        </form>
+      </div>
+     </div>
+    </div>
+
+
+
+
+
+
+
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.weight}','${userValue.wd}','${userValue.iiw}','${userValue.age}','${userValue.bid}','${userValue.mothertagnumber}','${userValue.pm}','${userValue.dd}','${userValue.babyoneweight}','${userValue.babytwoweight}','${userValue.babythreeweight}','${userValue.nobm}','${userValue.nmma}','${userValue.vaccine}','${userValue.vd}','${userValue.nvd}','${userValue.wn}','${userValue.ddd}','${userValue.ndd}','${userValue.rejectable}','${userValue.sfs}','${userValue.sale}','${userValue.died}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
+
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Update User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form id="form2">
+<b>GOAT GENERAL DETAILS</b>
+<br></br>
+  <div class="form-group row">
+    <label for="tagnumber" class="col-sm-2 col-form-label">Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="tagnumber">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="dob" class="col-sm-2 col-form-label">DOB</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="dob">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="cp" class="col-sm-2 col-form-label">Purchase Cost (in Rs.)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="cp">
+    </div>
+  </div>
+  
+<!--    <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="btn-group" id="gender" data-toggle="buttons">
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="F">Female
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MA"> Male Andul
+   </label>
+   <label class="btn btn-default blue">
+     <input type="radio" class="toggle" name="toggle" value="MK"> Male Khassi
+   </label>
+</div>
+  </div> -->
+        
+ <div class="form-group row">
+    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-10">
+  <select id="gender" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="weight" class="col-sm-2 col-form-label">Weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="weight">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="wd" class="col-sm-2 col-form-label">weighting date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="wd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="iiw" class="col-sm-2 col-form-label">% increase in weight</label>
+    <div class="col-sm-10">
+      <input type="number" min="0" max="1" step="0.01" class="form-control" id="iiw"/>
+    </div>
+  </div> 
+  
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label">Age (in months)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="age">
+    </div>
+   </div> 
+  
+  <div class="form-group row">
+    <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="bid">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="mothertagnumber" class="col-sm-2 col-form-label">Mother Tag Number</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="mothertagnumber">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="pm" class="col-sm-2 col-form-label">Pregnancy month</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="pm">
+    </div>
+   </div> 
+   
+<br></br>
+   <b>PRODUCTION DETAILS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="dd" class="col-sm-2 col-form-label">Delivery date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="dd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="babyoneweight" class="col-sm-2 col-form-label">1st Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babyoneweight">
+    </div>
+   </div> 
+
+
+  <div class="form-group row">
+    <label for="babytwoweight" class="col-sm-2 col-form-label">2nd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babytwoweight">
+    </div>
+   </div> 
+   
+     <div class="form-group row">
+    <label for="babythreeweight" class="col-sm-2 col-form-label">3rd Baby weight (in kg)</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="babythreeweight">
+    </div>
+   </div> 
+   
+   <div class="form-group row">
+    <label for="nobm" class="col-sm-2 col-form-label">Number of baby mortality</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="nobm">
+    </div>
+   </div> 
+   
+  <div class="form-group row">
+    <label for="nmma" class="col-sm-2 col-form-label">Next mating month alert</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nmma">
+    </div>
+  </div>
+  
+<br></br>
+   <b>VACCINATION DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="vaccine" class="col-sm-2 col-form-label">Vaccine</label>
+    <div class="col-sm-10">
+  <select id="vaccine" class="form-control" name="vaccine">
+    <option value="et">ET(Half yearly)</option>
+    <option value="fmd">FMD(Half yearly)</option>
+    <option value="ppr">PPR(Yearly)</option>
+    <option value="pox">POX(Yearly)</option>
+  </select>
+    </div>
+  </div>
+  
+    <div class="form-group row">
+    <label for="vd" class="col-sm-2 col-form-label">vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="vd">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="nvd" class="col-sm-2 col-form-label">Next vaccination date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="nvd">
+    </div>
+  </div>
+
+
+<br></br>
+   <b>DEWORMING DETAILS</b>
+<br></br>
+
+ <div class="form-group row">
+    <label for="wn" class="col-sm-2 col-form-label">Wormicide Name</label>
+    <div class="col-sm-10">
+  <select id="wn" class="form-control" name="wn">
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="ddd" class="col-sm-2 col-form-label">Dosing date</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ddd">
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label for="ndd" class="col-sm-2 col-form-label">Next Dosing date(every 4 months)</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="ndd">
+    </div>
+  </div>
+  
+<br></br>
+   <b>DEPOSABLE STATUS</b>
+<br></br>
+
+  <div class="form-group row">
+    <label for="rejectable" class="col-sm-2 col-form-label">Rejectable</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="rejectable">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="sfs" class="col-sm-2 col-form-label">Suitable for Sale</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sfs">
+    </div>
+  </div>
+  
+     <div class="form-group row">
+    <label for="sale" class="col-sm-2 col-form-label">Sale Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="sale">
+    </div>
+  </div>
+  
+   <div class="form-group row">
+    <label for="died" class="col-sm-2 col-form-label">Died Details</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="died">
+    </div>
+  </div>
+
+<div class="modal-footer">
+           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update Goat</button>
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  
+</form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    </div>
+    </div>  
+
+
+
+    </div>
+    </div>
+    `
+  });
+};
+      
+      
+// function reset(){
+// document.getElementById("firstSection").innerHTML=`
+//  <form class="border p-4 mb-4" id="form">
+      
+//       <div class="form-group">
+//       <label>fname</label>
+//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
+//       </div>
+      
+//       <div class="form-group">
+//       <label>lname</label>
+//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
+//       </div>
+      
+//       <button type="submit" id="button1" class="btn btn-primary">Add User</button>
+//       <button style="display: none" id="button2" class="btn btn-success">Update User</button>
+//       <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
+      
+//       </form>
+// `;
+//     document.getElementById("form").addEventListener("submit",(e)=>{
+//       var fname=document.getElementById("fname").value;
+//         var lname=document.getElementById("lname").value;
+//         e.preventDefault();
+//         createUser(fname,lname);
+//         form.reset();
+//       });  
+// };
+      
+      
+      
+      
+function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+
+  console.log("==========================");
+  console.log(id);
+  console.log(tagnumber);
+  console.log(dob);
+  console.log(cp);
+  console.log(gender);
+  console.log(weight);
+  console.log(wd);
+  console.log(iiw);
+  console.log(age);
+  console.log("=================================");
+// document.getElementById("firstSection").innerHTML=`
+//  <form class="border p-4 mb-4" id="form2">
+      
+//       <div class="form-group">
+//       <label>fname</label>
+//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
+//       </div>
+      
+//       <div class="form-group">
+//       <label>lname</label>
+//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
+//       </div>
+      
+//       <button style="display: none" id="button1" class="btn btn-primary">Add User</button>
+//       <button type="submit" style="display: inline-block" id="button2" class="btn btn-success">Update User</button>
+//       <button style="display: inline-block" id="button3" class="btn btn-danger">Cancel</button>
+      
+//       </form>
+// `;
+    document.getElementById("form2").addEventListener("submit",(e)=>{
+        e.preventDefault();
+      });  
+  
+//      document.getElementById("button3").addEventListener("click",(e)=>{
+//         reset();
+//       }); 
+  
+  document.getElementById("button2").addEventListener("click",(e)=>{
+        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("age").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
+      }); 
+  
+document.getElementById("tagnumber").value=tagnumber;
+document.getElementById("dob").value=dob;
+document.getElementById("cp").value=cp;
+document.getElementById("gender").value=gender;
+document.getElementById("weight").value=weight;
+document.getElementById("wd").value=wd;
+document.getElementById("iiw").value=iiw;
+document.getElementById("age").value=age;
+document.getElementById("bid").value=bid;
+document.getElementById("mothertagnumber").value=mothertagnumber;
+document.getElementById("pm").value=pm;
+document.getElementById("dd").value=dd;
+document.getElementById("babyoneweight").value=babyoneweight;
+document.getElementById("babytwoweight").value=babytwoweight;
+document.getElementById("babythreeweight").value=babythreeweight;
+document.getElementById("nobm").value=nobm;
+document.getElementById("nmma").value=nmma;
+document.getElementById("vaccine").value=vaccine;
+document.getElementById("vd").value=vd;
+document.getElementById("nvd").value=nvd;
+document.getElementById("wn").value=wn;
+document.getElementById("ddd").value=ddd;
+document.getElementById("ndd").value=ndd;
+document.getElementById("rejectable").value=rejectable;
+document.getElementById("sfs").value=sfs;
+document.getElementById("sale").value=sale;
+document.getElementById("died").value=died;
+};
+      
+      
+function updateGoat2(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+var goatUpdated={
+     id:id,
+     tagnumber: tagnumber,
+dob: dob,
+cp: cp,
+gender: gender, 
+weight: weight,
+wd: wd,
+iiw: iiw,
+age: age,
+bid: bid,
+mothertagnumber: mothertagnumber,
+pm: pm,
+dd: dd,
+babyoneweight: babyoneweight,
+babytwoweight: babytwoweight,
+babythreeweight: babythreeweight,
+nobm: nobm,
+nmma: nmma,
+vaccine: vaccine,
+vd: vd,
+nvd: nvd,
+wn: wn,
+ddd: ddd,
+ndd: ndd,
+rejectable: rejectable,
+sfs: sfs,
+sale: sale,
+died: died
+   }
+   
+   let db=firebase.database().ref("/"+id);
+   db.set(goatUpdated);
+  
+  document.getElementById("cardSection").innerHTML='';
+  readGoat();
+//   reset();
+};
+      
+  
+function delGoat(id){
+   document.getElementById("button3").addEventListener("click",(e)=>{
+        deleteGoat(id);
+      }); 
+};
+      
+function deleteGoat(id){
+   var user=firebase.database().ref("/"+id);
+   user.remove();
+  
+  document.getElementById("cardSection").innerHTML='';
+  readGoat();
+};
+      
+      
+</script>
+    
+
+  </body>
+</html>
