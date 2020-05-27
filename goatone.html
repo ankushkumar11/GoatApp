@@ -215,6 +215,17 @@ function convertDate(dateString){
       <input type="text" class="form-control" id="tagnumbera">
     </div>
   </div>
+        
+  <div class="form-group row">
+    <label for="status" class="col-sm-2 col-form-label">Status</label>
+    <div class="col-sm-10">
+  <select id="statusa" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="sold">Sold</option>
+    <option value="died">Died</option>
+  </select>
+    </div>
+  </div>
   
   <div class="form-group row">
     <label for="dob" class="col-sm-2 col-form-label">DOB</label>
@@ -276,13 +287,6 @@ function convertDate(dateString){
       <input type="number" class="form-control" id="iiwa"/>
     </div>
   </div> 
-  
-  <div class="form-group row">
-    <label for="age" class="col-sm-2 col-form-label">Age (in months)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="agea">
-    </div>
-   </div> 
   
   <div class="form-group row">
     <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
@@ -499,13 +503,13 @@ function convertDate(dateString){
       
          function addGoat(){
            var tagnumber=document.getElementById("tagnumbera").value;
+           var status=document.getElementById("statusa").value;
 var dob=document.getElementById("doba").value;
 var cp=document.getElementById("cpa").value;
 var gender=document.getElementById("gendera").value;
 var weight=document.getElementById("weighta").value;
 var wd=document.getElementById("wda").value;
 var iiw=document.getElementById("iiwa").value;
-var age=document.getElementById("agea").value;
 var bid=document.getElementById("bida").value;
 var mothertagnumber=document.getElementById("mothertagnumbera").value;
 var pm=document.getElementById("pma").value;
@@ -525,22 +529,22 @@ var rejectable=document.getElementById("rejectablea").value;
 var sfs=document.getElementById("sfsa").value;
 var sale=document.getElementById("salea").value;
 var died=document.getElementById("dieda").value;
-        createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
+        createGoat(tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
  form.reset();
       };
       
-   function createGoat(tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+   function createGoat(tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
    counter+=1;
    var goat={
      id:counter,
      tagnumber: tagnumber,
+     status:status,
 dob: dob,
 cp: cp,
 gender: gender, 
 weight: weight,
 wd: wd,
 iiw: iiw,
-age: age,
 bid: bid,
 mothertagnumber: mothertagnumber,
 pm: pm,
@@ -641,7 +645,7 @@ function readGoat(){
 
 
 
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.weight}','${userValue.wd}','${userValue.iiw}','${userValue.age}','${userValue.bid}','${userValue.mothertagnumber}','${userValue.pm}','${userValue.dd}','${userValue.babyoneweight}','${userValue.babytwoweight}','${userValue.babythreeweight}','${userValue.nobm}','${userValue.nmma}','${userValue.vaccine}','${userValue.vd}','${userValue.nvd}','${userValue.wn}','${userValue.ddd}','${userValue.ndd}','${userValue.rejectable}','${userValue.sfs}','${userValue.sale}','${userValue.died}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.status}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.weight}','${userValue.wd}','${userValue.iiw}','${userValue.bid}','${userValue.mothertagnumber}','${userValue.pm}','${userValue.dd}','${userValue.babyoneweight}','${userValue.babytwoweight}','${userValue.babythreeweight}','${userValue.nobm}','${userValue.nmma}','${userValue.vaccine}','${userValue.vd}','${userValue.nvd}','${userValue.wn}','${userValue.ddd}','${userValue.ndd}','${userValue.rejectable}','${userValue.sfs}','${userValue.sale}','${userValue.died}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
 
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -661,6 +665,17 @@ function readGoat(){
     <label for="tagnumber" class="col-sm-2 col-form-label">Tag Number</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" id="tagnumber">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="status" class="col-sm-2 col-form-label">Status</label>
+    <div class="col-sm-10">
+  <select id="status" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="sold">Sold</option>
+    <option value="died">Died</option>
+  </select>
     </div>
   </div>
   
@@ -724,13 +739,6 @@ function readGoat(){
       <input type="number" min="0" max="1" step="0.01" class="form-control" id="iiw"/>
     </div>
   </div> 
-  
-  <div class="form-group row">
-    <label for="age" class="col-sm-2 col-form-label">Age (in months)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="age">
-    </div>
-   </div> 
   
   <div class="form-group row">
     <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
@@ -954,7 +962,7 @@ function readGoat(){
       
       
       
-function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+function updateGoat(id,tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
 
   console.log("==========================");
   console.log(id);
@@ -964,8 +972,6 @@ function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnu
   console.log(gender);
   console.log(weight);
   console.log(wd);
-  console.log(iiw);
-  console.log(age);
   console.log("=================================");
 // document.getElementById("firstSection").innerHTML=`
 //  <form class="border p-4 mb-4" id="form2">
@@ -995,17 +1001,17 @@ function updateGoat(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnu
 //       }); 
   
   document.getElementById("button2").addEventListener("click",(e)=>{
-        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("age").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
+        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("status").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
       }); 
   
 document.getElementById("tagnumber").value=tagnumber;
+document.getElementById("status").value=status;
 document.getElementById("dob").value=dob;
 document.getElementById("cp").value=cp;
 document.getElementById("gender").value=gender;
 document.getElementById("weight").value=weight;
 document.getElementById("wd").value=wd;
 document.getElementById("iiw").value=iiw;
-document.getElementById("age").value=age;
 document.getElementById("bid").value=bid;
 document.getElementById("mothertagnumber").value=mothertagnumber;
 document.getElementById("pm").value=pm;
@@ -1028,17 +1034,17 @@ document.getElementById("died").value=died;
 };
       
       
-function updateGoat2(id,tagnumber,dob,cp,gender,weight,wd,iiw,age,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+function updateGoat2(id,tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
 var goatUpdated={
      id:id,
      tagnumber: tagnumber,
+  status: status,
 dob: dob,
 cp: cp,
 gender: gender, 
 weight: weight,
 wd: wd,
 iiw: iiw,
-age: age,
 bid: bid,
 mothertagnumber: mothertagnumber,
 pm: pm,
