@@ -111,7 +111,7 @@
 
 function convertDate(dateString){
   var p = dateString.split(/\D/g)
-  return [p[2],p[1],p[0] ].join("/")
+  return [p[1],p[2],p[0] ].join("/")
 }
 
 /* alert(convertDate("2001-9-11")); */
@@ -584,7 +584,7 @@ function readGoat(){
       <div class="card-body">
 <h4><b>GOAT GENERAL DETAILS</b></h4>
         <h5 class="card-title">Tag Number: ${userValue.tagnumber}</h5>
-<p class="card-text">DOB: ${console.log(userValue.dob)} ${userValue.dob}</p>
+<p class="card-text">DOB: ${userValue.dob}</p>
 <p class="card-text">Purchase Cost (in Rs.): ${userValue.cp}</p>
 <p class="card-text">Gender: ${userValue.gender}</p>
 <p class="card-text">Weight (in kg): ${userValue.weight}</p>
