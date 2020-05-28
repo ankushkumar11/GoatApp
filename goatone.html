@@ -299,34 +299,37 @@ function convertDate(dateString){
     </div>
   </div>
   
-  <div class="form-group row">
-    <label for="babyoneweight" class="col-sm-2 col-form-label">1st Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babyoneweighta">
+   <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="weight(in kg)">
+      <input type="text" readonly class="form-control" placeholder="gender">
+      <input type="text" readonly class="form-control" placeholder="status">
     </div>
-   </div> 
-
-
-  <div class="form-group row">
-    <label for="babytwoweight" class="col-sm-2 col-form-label">2nd Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babytwoweighta">
+  
+    <div class="input-group mb-3">
+      <input type="date" class="form-control" id="saledate" placeholder="weight(in kg)">
+        <select id="gendera" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+       <select id="statusa" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="sold">Sold</option>
+    <option value="died">Died</option>
+  </select>
+    </div> 
+    
+       <div class="input-group mb-3">
+      <input type="date" class="form-control" id="saledate" placeholder="date">
+      <input type="number" class="form-control" id="saleweight" placeholder="weight(in kg)">
+      <input type="number" class="form-control" id="saleamount" placeholder="amount">
     </div>
-   </div> 
-   
-     <div class="form-group row">
-    <label for="babythreeweight" class="col-sm-2 col-form-label">3rd Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babythreeweighta">
+    
+    <div class="input-group mb-3">
+      <input type="date" class="form-control" id="saledate" placeholder="date">
+      <input type="number" class="form-control" id="saleweight" placeholder="weight(in kg)">
+      <input type="number" class="form-control" id="saleamount" placeholder="amount">
     </div>
-   </div> 
-   
-   <div class="form-group row">
-    <label for="nobm" class="col-sm-2 col-form-label">Number of baby mortality</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="nobma">
-    </div>
-   </div> 
    
   <div class="form-group row">
     <label for="nmma" class="col-sm-2 col-form-label">Next mating month alert</label>
