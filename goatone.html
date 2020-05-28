@@ -732,10 +732,31 @@ function readGoat(){
     </div> 
 
 <h4><b>VACCINATION DETAILS</b></h4>
-<p class="card-text">ET: ${userValue.etDate}</p>
-<p class="card-text">FMD: ${userValue.fmdDate}</p>
-<p class="card-text">PPR: ${userValue.pprDate}</p>
-<p class="card-text">POX: ${userValue.poxDate}</p>
+  <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="vaccine">
+      <input type="text" readonly class="form-control" placeholder="date">
+    </div> 
+
+ <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="ET">
+      <input type="text" readonly class="form-control" value="${userValue.etDate}">
+    </div> 
+
+ <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="FMD">
+      <input type="text" readonly class="form-control" value="${userValue.fmdDate}">
+    </div> 
+
+ <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="PPR">
+      <input type="text" readonly class="form-control" value="${userValue.pprDate}">
+    </div> 
+
+ <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="POX">
+      <input type="text" readonly class="form-control" value="${userValue.poxDate}">
+    </div> 
+  
 <h4><b>DEWORMING DETAILS</b></h4>
 <p class="card-text">Wormicide Name: ${userValue.wormicideNameOne}</p>
 <p class="card-text">Dosing date: ${userValue.wormicideDosingDateOne}</p>
