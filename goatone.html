@@ -707,6 +707,21 @@ function readGoat(){
 <p class="card-text">Pregnancy month: ${userValue.pm}</p>
 <h4><b>PRODUCTION DETAILS</b></h4>
 <p class="card-text">Delivery date: ${userValue.dd}</p>
+ <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="baby weight(in kg)">
+      <input type="text" readonly class="form-control" placeholder="baby gender">
+      <input type="text" readonly class="form-control" placeholder="baby status">
+    </div>
+  
+    <div class="input-group mb-3">
+      <input type="number" readonly class="form-control" value="${userValue.babyOneWeight}">
+        <select readonly class="form-control" name="gender">
+    <option value="${userValue.babyOneGender}">${userValue.babyOneGender}</option>
+  </select>
+       <select readonly class="form-control" name="status">
+    <option value="${userValue.babyOneStatus}">${userValue.babyOneStatus}</option>
+  </select>
+    </div> 
 <p class="card-text">1st Baby weight(in kg): ${userValue.babyOneWeight}</p>
 <p class="card-text">2nd Baby weight(in kg): ${userValue.babyTwoWeight}</p>
 <p class="card-text">3rd Baby weight(in kg): ${userValue.babyThreeweight}</p>
