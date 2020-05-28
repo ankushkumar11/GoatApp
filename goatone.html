@@ -549,82 +549,130 @@ function convertDate(dateString){
   var t=d.getTime();
   var counter=t;
    
-//       function addUser(){
-//       document.getElementById("form").addEventListener("submit",(e)=>{
-//       var fname=document.getElementById("fname").value;
-//         console.log("========fname=====");
-//         console.log(fname);
-//         var lname=document.getElementById("lname").value;
-//         e.preventDefault();
-//         createUser(fname,lname);
-//         form.reset();
-//       });
-//       };
-      
       
          function addGoat(){
-           var tagnumber=document.getElementById("tagnumbera").value;
-           var status=document.getElementById("statusa").value;
+var tagnumber=document.getElementById("tagnumbera").value;
+var status=document.getElementById("statusa").value;
 var dob=document.getElementById("doba").value;
 var cp=document.getElementById("cpa").value;
 var gender=document.getElementById("gendera").value;
-var weight=document.getElementById("weighta").value;
-var wd=document.getElementById("wda").value;
-var iiw=document.getElementById("iiwa").value;
 var bid=document.getElementById("bida").value;
-var mothertagnumber=document.getElementById("mothertagnumbera").value;
+var motherTagNumber=document.getElementById("motherTagNumbera").value;
 var pm=document.getElementById("pma").value;
 var dd=document.getElementById("dda").value;
-var babyoneweight=document.getElementById("babyoneweighta").value;
-var babytwoweight=document.getElementById("babytwoweighta").value;
-var babythreeweight=document.getElementById("babythreeweighta").value;
-var nobm=document.getElementById("nobma").value;
-var nmma=document.getElementById("nmmaa").value;
-var vaccine=document.getElementById("vaccinea").value;
-var vd=document.getElementById("vda").value;
-var nvd=document.getElementById("nvda").value;
-var wn=document.getElementById("wna").value;
-var ddd=document.getElementById("ddda").value;
-var ndd=document.getElementById("ndda").value;
+var babyOneWeight=document.getElementById("babyOneWeighta").value;
+var babyTwoWeight=document.getElementById("babyTwoWeighta").value;
+var babyThreeweight=document.getElementById("babyThreeweighta").value;
+var babyOneGender=document.getElementById("babyOneGendera").value;
+var babyTwoGender=document.getElementById("babyTwoGendera").value;
+var babyThreeGender=document.getElementById("babyThreeGendera").value;
+var babyOneStatus=document.getElementById("babyOneStatusa").value;
+var babyTwoStatus=document.getElementById("babyTwoStatusa").value;
+var babyThreeStatus=document.getElementById("babyThreeStatusa").value;
+var etDate=document.getElementById("etDatea").value;
+var fmdDate=document.getElementById("fmdDatea").value;
+var pprDate=document.getElementById("pprDatea").value;
+var poxDate=document.getElementById("poxDatea").value;
+var wormicideNameOne=document.getElementById("wormicideNameOnea").value;
+var wormicideNameTwo=document.getElementById("wormicideNameTwoa").value;
+var wormicideNameThree=document.getElementById("wormicideNameThreea").value;
+var wormicideNameFour=document.getElementById("wormicideNameFoura").value;
+var wormicideNameFive=document.getElementById("wormicideNameFivea").value;
+var wormicideDosingDateOne=document.getElementById("wormicideDosingDateOnea").value;
+var wormicideDosingDateTwo=document.getElementById("wormicideDosingDateTwoa").value;
+var wormicideDosingDateThree=document.getElementById("wormicideDosingDateThreea").value;
+var wormicideDosingDateFour=document.getElementById("wormicideDosingDateFoura").value;
+var wormicideDosingDateFive=document.getElementById("wormicideDosingDateFivea").value;
 var rejectable=document.getElementById("rejectablea").value;
 var sfs=document.getElementById("sfsa").value;
-var sale=document.getElementById("salea").value;
-var died=document.getElementById("dieda").value;
-        createGoat(tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died);
+var saleDate=document.getElementById("saleDatea").value;
+var saleWeight=document.getElementById("saleWeighta").value;
+var saleAmount=document.getElementById("saleAmounta").value;
+var weightOne=document.getElementById("weightOnea").value;
+var weightTwo=document.getElementById("weightTwoa").value;
+var weightThree=document.getElementById("weightThreea").value;
+var weightFour=document.getElementById("weightFoura").value;
+var weightFive=document.getElementById("weightFivea").value;
+var weightSix=document.getElementById("weightSixa").value;
+var weightSeven=document.getElementById("weightSevena").value;
+var weightEight=document.getElementById("weightEighta").value;
+var weightNine=document.getElementById("weightNinea").value;
+var weightTen=document.getElementById("weightTena").value;
+var weightDateOne=document.getElementById("weightDateOnea").value;
+var weightDateTwo=document.getElementById("weightDateTwoa").value;
+var weightDateThree=document.getElementById("weightDateThreea").value;
+var weightDateFour=document.getElementById("weightDateFoura").value;
+var weightDateFive=document.getElementById("weightDateFivea").value;
+var weightDateSix=document.getElementById("weightDateSixa").value;
+var weightDateSeven=document.getElementById("weightDateSevena").value;
+var weightDateEight=document.getElementById("weightDateEighta").value;
+var weightDateNine=document.getElementById("weightDateNinea").value;
+var weightDateTen=document.getElementById("weightDateTena").value;
+        createGoat(tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,babyOneWeight,babyTwoWeight,babyThreeweight,babyOneGender,babyTwoGender,babyThreeGender,babyOneStatus,babyTwoStatus,babyThreeStatus,etDate,fmdDate,pprDate,poxDate,wormicideNameOne,wormicideNameTwo,wormicideNameThree,wormicideNameFour,wormicideNameFive,wormicideDosingDateOne,wormicideDosingDateTwo,wormicideDosingDateThree,wormicideDosingDateFour,wormicideDosingDateFive,rejectable,sfs,saleDate,saleWeight,saleAmount,weightOne,weightTwo,weightThree,weightFour,weightFive,weightSix,weightSeven,weightEight,weightNine,weightTen,weightDateOne,weightDateTwo,weightDateThree,weightDateFour,weightDateFive,weightDateSix,weightDateSeven,weightDateEight,weightDateNine,weightDateTen);
  form.reset();
       };
       
-   function createGoat(tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+   function createGoat(tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,babyOneWeight,babyTwoWeight,babyThreeweight,babyOneGender,babyTwoGender,babyThreeGender,babyOneStatus,babyTwoStatus,babyThreeStatus,etDate,fmdDate,pprDate,poxDate,wormicideNameOne,wormicideNameTwo,wormicideNameThree,wormicideNameFour,wormicideNameFive,wormicideDosingDateOne,wormicideDosingDateTwo,wormicideDosingDateThree,wormicideDosingDateFour,wormicideDosingDateFive,rejectable,sfs,saleDate,saleWeight,saleAmount,weightOne,weightTwo,weightThree,weightFour,weightFive,weightSix,weightSeven,weightEight,weightNine,weightTen,weightDateOne,weightDateTwo,weightDateThree,weightDateFour,weightDateFive,weightDateSix,weightDateSeven,weightDateEight,weightDateNine,weightDateTen){
    counter+=1;
    var goat={
      id:counter,
-     tagnumber: tagnumber,
-     status:status,
+    tagnumber: tagnumber,
+status: status,
 dob: dob,
 cp: cp,
-gender: gender, 
-weight: weight,
-wd: wd,
-iiw: iiw,
+gender: gender,
 bid: bid,
-mothertagnumber: mothertagnumber,
+motherTagNumber: motherTagNumber,
 pm: pm,
 dd: dd,
-babyoneweight: babyoneweight,
-babytwoweight: babytwoweight,
-babythreeweight: babythreeweight,
-nobm: nobm,
-nmma: nmma,
-vaccine: vaccine,
-vd: vd,
-nvd: nvd,
-wn: wn,
-ddd: ddd,
-ndd: ndd,
+babyOneWeight: babyOneWeight,
+babyTwoWeight: babyTwoWeight,
+babyThreeweight: babyThreeweight,
+babyOneGender: babyOneGender,
+babyTwoGender: babyTwoGender,
+babyThreeGender: babyThreeGender,
+babyOneStatus: babyOneStatus,
+babyTwoStatus: babyTwoStatus,
+babyThreeStatus: babyThreeStatus,
+etDate: etDate,
+fmdDate: fmdDate,
+pprDate: pprDate,
+poxDate: poxDate,
+wormicideNameOne: wormicideNameOne,
+wormicideNameTwo: wormicideNameTwo,
+wormicideNameThree: wormicideNameThree,
+wormicideNameFour: wormicideNameFour,
+wormicideNameFive: wormicideNameFive,
+wormicideDosingDateOne: wormicideDosingDateOne,
+wormicideDosingDateTwo: wormicideDosingDateTwo,
+wormicideDosingDateThree: wormicideDosingDateThree,
+wormicideDosingDateFour: wormicideDosingDateFour,
+wormicideDosingDateFive: wormicideDosingDateFive,
 rejectable: rejectable,
 sfs: sfs,
-sale: sale,
-died: died
+saleDate: saleDate,
+saleWeight: saleWeight,
+saleAmount: saleAmount,
+weightOne: weightOne,
+weightTwo: weightTwo,
+weightThree: weightThree,
+weightFour: weightFour,
+weightFive: weightFive,
+weightSix: weightSix,
+weightSeven: weightSeven,
+weightEight: weightEight,
+weightNine: weightNine,
+weightTen: weightTen,
+weightDateOne: weightDateOne,
+weightDateTwo: weightDateTwo,
+weightDateThree: weightDateThree,
+weightDateFour: weightDateFour,
+weightDateFive: weightDateFive,
+weightDateSix: weightDateSix,
+weightDateSeven: weightDateSeven,
+weightDateEight: weightDateEight,
+weightDateNine: weightDateNine,
+weightDateTen: weightDateTen
    }
    
         console.log("========goat=====");
@@ -653,33 +701,64 @@ function readGoat(){
 <p class="card-text">DOB: ${userValue.dob}</p>
 <p class="card-text">Purchase Cost (in Rs.): ${userValue.cp}</p>
 <p class="card-text">Gender: ${userValue.gender}</p>
-<p class="card-text">Weight (in kg): ${userValue.weight}</p>
-<p class="card-text">weighting date: ${userValue.wd}</p>
-<p class="card-text">% increase in weight: ${userValue.iiw}</p>
 <p class="card-text">Age (in months): ${getAge(convertDate(userValue.dob))}</p>
 <p class="card-text">Bread/Identification details: ${userValue.bid}</p>
-<p class="card-text">Mother Tag Number: ${userValue.mothertagnumber}</p>
+<p class="card-text">Mother Tag Number: ${userValue.motherTagNumber}</p>
 <p class="card-text">Pregnancy month: ${userValue.pm}</p>
 <h4><b>PRODUCTION DETAILS</b></h4>
 <p class="card-text">Delivery date: ${userValue.dd}</p>
-<p class="card-text">1st Baby weight: (in kg)${userValue.babyoneweight}</p>
-<p class="card-text">2nd Baby weight: (in kg)${userValue.babytwoweight}</p>
-<p class="card-text">3rd Baby weight: (in kg)${userValue.babythreeweight}</p>
-<p class="card-text">Number of baby mortality: ${userValue.nobm}</p>
-<p class="card-text">Next mating month alert: ${userValue.nmma}</p>
+<p class="card-text">1st Baby weight: (in kg)${userValue.babyOneWeight}</p>
+<p class="card-text">2nd Baby weight: (in kg)${userValue.babyTwoWeight}</p>
+<p class="card-text">3rd Baby weight: (in kg)${userValue.babyThreeweight}</p>
+<p class="card-text">1st Baby gender: (in kg)${userValue.babyOneGender}</p>
+<p class="card-text">2nd Baby gender: (in kg)${userValue.babyTwoGender}</p>
+<p class="card-text">3rd Baby gender: (in kg)${userValue.babyThreeGender}</p>
+<p class="card-text">1st Baby status: (in kg)${userValue.babyOneStatus}</p>
+<p class="card-text">2nd Baby status: (in kg)${userValue.babyTwoStatus}</p>
+<p class="card-text">3rd Baby status: (in kg)${userValue.babyThreeStatus}</p>
 <h4><b>VACCINATION DETAILS</b></h4>
-<p class="card-text">Vaccine: ${userValue.vaccine}</p>
-<p class="card-text">vaccination date: ${userValue.vd}</p>
-<p class="card-text">Next vaccination date: ${userValue.nvd}</p>
+<p class="card-text">ET: ${userValue.etDate}</p>
+<p class="card-text">FMD: ${userValue.fmdDate}</p>
+<p class="card-text">PPR: ${userValue.pprDate}</p>
+<p class="card-text">POX: ${userValue.poxDate}</p>
 <h4><b>DEWORMING DETAILS</b></h4>
-<p class="card-text">Wormicide Name: ${userValue.wn}</p>
-<p class="card-text">Dosing date: ${userValue.ddd}</p>
-<p class="card-text">Next Dosing date(every 4 months): ${userValue.ndd}</p>
+<p class="card-text">Wormicide Name: ${userValue.wormicideNameOne}</p>
+<p class="card-text">Dosing date: ${userValue.wormicideDosingDateOne}</p>
+<p class="card-text">Wormicide Name: ${userValue.wormicideNameTwo}</p>
+<p class="card-text">Dosing date: ${userValue.wormicideDosingDateTwo}</p>
+<p class="card-text">Wormicide Name: ${userValue.wormicideNameThree}</p>
+<p class="card-text">Dosing date: ${userValue.wormicideDosingDateThree}</p>
+<p class="card-text">Wormicide Name: ${userValue.wormicideNameFour}</p>
+<p class="card-text">Dosing date: ${userValue.wormicideDosingDateFour}</p>
+<p class="card-text">Wormicide Name: ${userValue.wormicideNameFive}</p>
+<p class="card-text">Dosing date: ${userValue.wormicideDosingDateFive}</p>
 <h4><b>DEPOSABLE STATUS</b></h4>
 <p class="card-text">Rejectable: ${userValue.rejectable}</p>
 <p class="card-text">Suitable for Sale: ${userValue.sfs}</p>
-<p class="card-text">Sale Details: ${userValue.sale}</p>
-<p class="card-text">Died Details: ${userValue.died}</p>
+<p class="card-text">Sale Date: ${userValue.saleDate}</p>
+<p class="card-text">Sale Weight: ${userValue.saleWeight}</p>
+<p class="card-text">Sale Amount: ${userValue.saleAmount}</p>
+<h4><b>WEIGHT RECORDS</b></h4>
+<p class="card-text">Weight: ${userValue.weightOne}</p>
+<p class="card-text">Date: ${userValue.weightDateOne}</p>
+<p class="card-text">Weight: ${userValue.weightTwo}</p>
+<p class="card-text">Date: ${userValue.weightDateTwo}</p>
+<p class="card-text">Weight: ${userValue.weightThree}</p>
+<p class="card-text">Date: ${userValue.weightDateThree}</p>
+<p class="card-text">Weight: ${userValue.weightFour}</p>
+<p class="card-text">Date: ${userValue.weightDateFour}</p>
+<p class="card-text">Weight: ${userValue.weightFive}</p>
+<p class="card-text">Date: ${userValue.weightDateFive}</p>
+<p class="card-text">Weight: ${userValue.weightSix}</p>
+<p class="card-text">Date: ${userValue.weightDateSix}</p>
+<p class="card-text">Weight: ${userValue.weightSeven}</p>
+<p class="card-text">Date: ${userValue.weightDateSeven}</p>
+<p class="card-text">Weight: ${userValue.weightEight}</p>
+<p class="card-text">Date: ${userValue.weightDateEight}</p>
+<p class="card-text">Weight: ${userValue.weightNine}</p>
+<p class="card-text">Date: ${userValue.weightDateNine}</p>
+<p class="card-text">Weight: ${userValue.weightTen}</p>
+<p class="card-text">Date: ${userValue.weightDateTen}</p>
         <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delGoat(${userValue.id})">Delete Goat</button> 
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -707,7 +786,7 @@ function readGoat(){
 
 
 
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.status}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.weight}','${userValue.wd}','${userValue.iiw}','${userValue.bid}','${userValue.mothertagnumber}','${userValue.pm}','${userValue.dd}','${userValue.babyoneweight}','${userValue.babytwoweight}','${userValue.babythreeweight}','${userValue.nobm}','${userValue.nmma}','${userValue.vaccine}','${userValue.vd}','${userValue.nvd}','${userValue.wn}','${userValue.ddd}','${userValue.ndd}','${userValue.rejectable}','${userValue.sfs}','${userValue.sale}','${userValue.died}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.status}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.bid}','${userValue.motherTagNumber}','${userValue.pm}','${userValue.dd}','${userValue.babyOneWeight}','${userValue.babyTwoWeight}','${userValue.babyThreeweight}','${userValue.babyOneGender}','${userValue.babyTwoGender}','${userValue.babyThreeGender}','${userValue.babyOneStatus}','${userValue.babyTwoStatus}','${userValue.babyThreeStatus}','${userValue.etDate}','${userValue.fmdDate}','${userValue.pprDate}','${userValue.poxDate}','${userValue.wormicideNameOne}','${userValue.wormicideNameTwo}','${userValue.wormicideNameThree}','${userValue.wormicideNameFour}','${userValue.wormicideNameFive}','${userValue.wormicideDosingDateOne}','${userValue.wormicideDosingDateTwo}','${userValue.wormicideDosingDateThree}','${userValue.wormicideDosingDateFour}','${userValue.wormicideDosingDateFive}','${userValue.rejectable}','${userValue.sfs}','${userValue.saleDate}','${userValue.saleWeight}','${userValue.saleAmount}','${userValue.weightOne}','${userValue.weightTwo}','${userValue.weightThree}','${userValue.weightFour}','${userValue.weightFive}','${userValue.weightSix}','${userValue.weightSeven}','${userValue.weightEight}','${userValue.weightNine}','${userValue.weightTen}','${userValue.weightDateOne}','${userValue.weightDateTwo}','${userValue.weightDateThree}','${userValue.weightDateFour}','${userValue.weightDateFive}','${userValue.weightDateSix}','${userValue.weightDateSeven}','${userValue.weightDateEight}','${userValue.weightDateNine}','${userValue.weightDateTen}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
 
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -729,7 +808,7 @@ function readGoat(){
       <input type="text" class="form-control" id="tagnumber">
     </div>
   </div>
-
+        
   <div class="form-group row">
     <label for="status" class="col-sm-2 col-form-label">Status</label>
     <div class="col-sm-10">
@@ -754,21 +833,6 @@ function readGoat(){
       <input type="number" class="form-control" id="cp">
     </div>
   </div>
-  
-<!--    <div class="form-group row">
-    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
-    <div class="btn-group" id="gender" data-toggle="buttons">
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="F">Female
-   </label>
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="MA"> Male Andul
-   </label>
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="MK"> Male Khassi
-   </label>
-</div>
-  </div> -->
         
  <div class="form-group row">
     <label for="gender" class="col-sm-2 col-form-label">Gender</label>
@@ -781,29 +845,8 @@ function readGoat(){
     </div>
   </div>
   
-   <div class="form-group row">
-    <label for="weight" class="col-sm-2 col-form-label">Weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="weight">
-    </div>
-   </div> 
-   
-   <div class="form-group row">
-    <label for="wd" class="col-sm-2 col-form-label">weighting date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="wd">
-    </div>
-  </div>
-  
   <div class="form-group row">
-    <label for="iiw" class="col-sm-2 col-form-label">% increase in weight</label>
-    <div class="col-sm-10">
-      <input type="number" min="0" max="1" step="0.01" class="form-control" id="iiw"/>
-    </div>
-  </div> 
-  
-  <div class="form-group row">
-    <label for="bid" class="col-sm-2 col-form-label">Bread/Identification details</label>
+    <label for="bid" class="col-sm-2 col-form-label">Breed/Identification details</label>
     <div class="col-sm-10">
       <input type="text" class="form-control" id="bid">
     </div>
@@ -812,7 +855,7 @@ function readGoat(){
    <div class="form-group row">
     <label for="mothertagnumber" class="col-sm-2 col-form-label">Mother Tag Number</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="mothertagnumber">
+      <input type="text" class="form-control" id="motherTagNumber">
     </div>
   </div>
   
@@ -834,81 +877,100 @@ function readGoat(){
     </div>
   </div>
   
-  <div class="form-group row">
-    <label for="babyoneweight" class="col-sm-2 col-form-label">1st Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babyoneweight">
+   <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="baby weight(in kg)">
+      <input type="text" readonly class="form-control" placeholder="baby gender">
+      <input type="text" readonly class="form-control" placeholder="baby status">
     </div>
-   </div> 
-
-
-  <div class="form-group row">
-    <label for="babytwoweight" class="col-sm-2 col-form-label">2nd Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babytwoweight">
-    </div>
-   </div> 
-   
-     <div class="form-group row">
-    <label for="babythreeweight" class="col-sm-2 col-form-label">3rd Baby weight (in kg)</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="babythreeweight">
-    </div>
-   </div> 
-   
-   <div class="form-group row">
-    <label for="nobm" class="col-sm-2 col-form-label">Number of baby mortality</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="nobm">
-    </div>
-   </div> 
-   
-  <div class="form-group row">
-    <label for="nmma" class="col-sm-2 col-form-label">Next mating month alert</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="nmma">
-    </div>
-  </div>
+  
+    <div class="input-group mb-3">
+      <input type="date" class="form-control" id="babyOneWeight" placeholder="weight(in kg)">
+        <select id="babyOneGender" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+       <select id="babyOneStatus" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="died">Died</option>
+  </select>
+    </div> 
+    
+   <div class="input-group mb-3">
+      <input type="date" class="form-control" id="babyTwoWeight" placeholder="weight(in kg)">
+        <select id="babyTwoGender" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+       <select id="babyTwoStatus" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="died">Died</option>
+  </select>
+    </div> 
+    
+  <div class="input-group mb-3">
+      <input type="date" class="form-control" id="babyThreeweight" placeholder="weight(in kg)">
+        <select id="babyThreeGender" class="form-control" name="gender">
+    <option value="F">Female</option>
+    <option value="MA">Male Andul</option>
+    <option value="MK">Male Khassi</option>
+  </select>
+       <select id="babyThreeStatus" class="form-control" name="status">
+    <option value="alive">Alive</option>
+    <option value="died">Died</option>
+  </select>
+    </div> 
   
 <br></br>
    <b>VACCINATION DETAILS</b>
 <br></br>
-
- <div class="form-group row">
-    <label for="vaccine" class="col-sm-2 col-form-label">Vaccine</label>
-    <div class="col-sm-10">
-  <select id="vaccine" class="form-control" name="vaccine">
-    <option value="et">ET(Half yearly)</option>
-    <option value="fmd">FMD(Half yearly)</option>
-    <option value="ppr">PPR(Yearly)</option>
-    <option value="pox">POX(Yearly)</option>
-  </select>
-    </div>
-  </div>
+      
+   <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="vaccine">
+      <input type="text" readonly class="form-control" placeholder="date">
+    </div> 
   
-    <div class="form-group row">
-    <label for="vd" class="col-sm-2 col-form-label">vaccination date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="vd">
+         <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">ET</span>
     </div>
-  </div>
-  
-   <div class="form-group row">
-    <label for="nvd" class="col-sm-2 col-form-label">Next vaccination date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="nvd">
+      <input type="date" class="form-control" id="etDate" placeholder="date">
+    </div> 
+      
+         <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">FMD</span>
     </div>
-  </div>
-
+      <input type="date" class="form-control" id="fmdDate" placeholder="date">
+    </div> 
+      
+         <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">PPR</span>
+    </div>
+      <input type="date" class="form-control" id="pprDate" placeholder="date">
+    </div> 
+      
+         <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">POX</span>
+    </div>
+      <input type="date" class="form-control" id="poxDate" placeholder="date">
+    </div> 
 
 <br></br>
    <b>DEWORMING DETAILS</b>
 <br></br>
-
- <div class="form-group row">
-    <label for="wn" class="col-sm-2 col-form-label">Wormicide Name</label>
-    <div class="col-sm-10">
-  <select id="wn" class="form-control" name="wn">
+    
+   <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="Wormicide Name">
+      <input type="text" readonly class="form-control" placeholder="Dosing date">
+  </div> 
+    
+  <div class="input-group mb-3">
+       <select id="wormicideNameOne" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
     <option value="hitek">hitek f inj</option>
@@ -921,22 +983,83 @@ function readGoat(){
     <option value="bandykind">bandykind</option>
     <option value="praziquintal">praziquintal</option>
   </select>
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="ddd" class="col-sm-2 col-form-label">Dosing date</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="ddd">
-    </div>
-  </div>
-  
-  <div class="form-group row">
-    <label for="ndd" class="col-sm-2 col-form-label">Next Dosing date(every 4 months)</label>
-    <div class="col-sm-10">
-      <input type="date" class="form-control" id="ndd">
-    </div>
-  </div>
+      <input type="date"class="form-control" id="wormicideDosingDateOne" placeholder="Dosing date">
+  </div> 
+        
+  <div class="input-group mb-3">
+       <select id="wormicideNameTwo" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" id="wormicideDosingDateTwo" placeholder="Dosing date">
+  </div> 
+    
+        
+  <div class="input-group mb-3">
+       <select id="wormicideNameThree" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" id="wormicideDosingDateThree" placeholder="Dosing date">
+  </div> 
+    
+        
+  <div class="input-group mb-3">
+       <select id="wormicideNameFour" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" id="wormicideDosingDateFour" placeholder="Dosing date">
+  </div> 
+    
+        
+  <div class="input-group mb-3">
+       <select id="wormicideNameFive" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" id="wormicideDosingDateFive" placeholder="Dosing date">
+  </div> 
   
 <br></br>
    <b>DEPOSABLE STATUS</b>
@@ -956,23 +1079,82 @@ function readGoat(){
     </div>
   </div>
   
-     <div class="form-group row">
-    <label for="sale" class="col-sm-2 col-form-label">Sale Details</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="sale">
+<p>Sale Details</p>
+    <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="date">
+      <input type="text" readonly class="form-control" placeholder="weight(in kg)">
+      <input type="text" readonly class="form-control" placeholder="amount">
     </div>
-  </div>
   
-   <div class="form-group row">
-    <label for="died" class="col-sm-2 col-form-label">Died Details</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="died">
+    <div class="input-group mb-3">
+      <input type="date" class="form-control" id="saleDate" placeholder="date">
+      <input type="number" class="form-control" id="saleWeight" placeholder="weight(in kg)">
+      <input type="number" class="form-control" id="saleAmount" placeholder="amount">
+    </div> 
+
+<br></br>
+   <b>WEIGHT RECORDS</b>
+<br></br>
+
+    <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="weight(in kg)">
+      <input type="text" readonly class="form-control" placeholder="date">
+    </div> 
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightOne" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateOne" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightTwo" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateTwo" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightThree" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateThree" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightFour" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateFour" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightFive" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateFive" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightSix" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateSix" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightSeven" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateSeven" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightEight" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateEight" placeholder="date">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightNine" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateNine" placeholder="date">
+    </div> 
+
+    <div class="input-group mb-3">
+      <input type="number" class="form-control" id="weightTen" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateTen" placeholder="date">
     </div>
-  </div>
 
 <div class="modal-footer">
-           <button type="submit" style="display: inline-block" id="button2" data-dismiss="modal" class="btn btn-success">Update Goat</button>
+           <button type="submit" id="button1" class="btn btn-primary" onclick="addGoat()">Add Goat</button>
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+</div>
   
 </form>
       </div>
@@ -992,78 +1174,18 @@ function readGoat(){
 };
       
       
-// function reset(){
-// document.getElementById("firstSection").innerHTML=`
-//  <form class="border p-4 mb-4" id="form">
-      
-//       <div class="form-group">
-//       <label>fname</label>
-//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
-//       </div>
-      
-//       <div class="form-group">
-//       <label>lname</label>
-//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
-//       </div>
-      
-//       <button type="submit" id="button1" class="btn btn-primary">Add User</button>
-//       <button style="display: none" id="button2" class="btn btn-success">Update User</button>
-//       <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
-      
-//       </form>
-// `;
-//     document.getElementById("form").addEventListener("submit",(e)=>{
-//       var fname=document.getElementById("fname").value;
-//         var lname=document.getElementById("lname").value;
-//         e.preventDefault();
-//         createUser(fname,lname);
-//         form.reset();
-//       });  
-// };
       
       
-      
-      
-function updateGoat(id,tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+function updateGoat(id,tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,babyOneWeight,babyTwoWeight,babyThreeweight,babyOneGender,babyTwoGender,babyThreeGender,babyOneStatus,babyTwoStatus,babyThreeStatus,etDate,fmdDate,pprDate,poxDate,wormicideNameOne,wormicideNameTwo,wormicideNameThree,wormicideNameFour,wormicideNameFive,wormicideDosingDateOne,wormicideDosingDateTwo,wormicideDosingDateThree,wormicideDosingDateFour,wormicideDosingDateFive,rejectable,sfs,saleDate,saleWeight,saleAmount,weightOne,weightTwo,weightThree,weightFour,weightFive,weightSix,weightSeven,weightEight,weightNine,weightTen,weightDateOne,weightDateTwo,weightDateThree,weightDateFour,weightDateFive,weightDateSix,weightDateSeven,weightDateEight,weightDateNine,weightDateTen){
 
-  console.log("==========================");
-  console.log(id);
-  console.log(tagnumber);
-  console.log(dob);
-  console.log(cp);
-  console.log(gender);
-  console.log(weight);
-  console.log(wd);
-  console.log("=================================");
-// document.getElementById("firstSection").innerHTML=`
-//  <form class="border p-4 mb-4" id="form2">
-      
-//       <div class="form-group">
-//       <label>fname</label>
-//       <input type="text" class="form control" id="fname" placeholder="Enter fname">
-//       </div>
-      
-//       <div class="form-group">
-//       <label>lname</label>
-//       <input type="text" class="form control" id="lname" placeholder="Enter lname">
-//       </div>
-      
-//       <button style="display: none" id="button1" class="btn btn-primary">Add User</button>
-//       <button type="submit" style="display: inline-block" id="button2" class="btn btn-success">Update User</button>
-//       <button style="display: inline-block" id="button3" class="btn btn-danger">Cancel</button>
-      
-//       </form>
-// `;
+
     document.getElementById("form2").addEventListener("submit",(e)=>{
         e.preventDefault();
       });  
   
-//      document.getElementById("button3").addEventListener("click",(e)=>{
-//         reset();
-//       }); 
   
   document.getElementById("button2").addEventListener("click",(e)=>{
-        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("status").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("weight").value,document.getElementById("wd").value,document.getElementById("iiw").value,document.getElementById("bid").value,document.getElementById("mothertagnumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyoneweight").value,document.getElementById("babytwoweight").value,document.getElementById("babythreeweight").value,document.getElementById("nobm").value,document.getElementById("nmma").value,document.getElementById("vaccine").value,document.getElementById("vd").value,document.getElementById("nvd").value,document.getElementById("wn").value,document.getElementById("ddd").value,document.getElementById("ndd").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("sale").value,document.getElementById("died").value);
+        updateGoat2(id,document.getElementById("tagnumber").value,document.getElementById("status").value,document.getElementById("dob").value,document.getElementById("cp").value,document.getElementById("gender").value,document.getElementById("bid").value,document.getElementById("motherTagNumber").value,document.getElementById("pm").value,document.getElementById("dd").value,document.getElementById("babyOneWeight").value,document.getElementById("babyTwoWeight").value,document.getElementById("babyThreeweight").value,document.getElementById("babyOneGender").value,document.getElementById("babyTwoGender").value,document.getElementById("babyThreeGender").value,document.getElementById("babyOneStatus").value,document.getElementById("babyTwoStatus").value,document.getElementById("babyThreeStatus").value,document.getElementById("etDate").value,document.getElementById("fmdDate").value,document.getElementById("pprDate").value,document.getElementById("poxDate").value,document.getElementById("wormicideNameOne").value,document.getElementById("wormicideNameTwo").value,document.getElementById("wormicideNameThree").value,document.getElementById("wormicideNameFour").value,document.getElementById("wormicideNameFive").value,document.getElementById("wormicideDosingDateOne").value,document.getElementById("wormicideDosingDateTwo").value,document.getElementById("wormicideDosingDateThree").value,document.getElementById("wormicideDosingDateFour").value,document.getElementById("wormicideDosingDateFive").value,document.getElementById("rejectable").value,document.getElementById("sfs").value,document.getElementById("saleDate").value,document.getElementById("saleWeight").value,document.getElementById("saleAmount").value,document.getElementById("weightOne").value,document.getElementById("weightTwo").value,document.getElementById("weightThree").value,document.getElementById("weightFour").value,document.getElementById("weightFive").value,document.getElementById("weightSix").value,document.getElementById("weightSeven").value,document.getElementById("weightEight").value,document.getElementById("weightNine").value,document.getElementById("weightTen").value,document.getElementById("weightDateOne").value,document.getElementById("weightDateTwo").value,document.getElementById("weightDateThree").value,document.getElementById("weightDateFour").value,document.getElementById("weightDateFive").value,document.getElementById("weightDateSix").value,document.getElementById("weightDateSeven").value,document.getElementById("weightDateEight").value,document.getElementById("weightDateNine").value,document.getElementById("weightDateTen").value);
       }); 
   
 document.getElementById("tagnumber").value=tagnumber;
@@ -1071,61 +1193,121 @@ document.getElementById("status").value=status;
 document.getElementById("dob").value=dob;
 document.getElementById("cp").value=cp;
 document.getElementById("gender").value=gender;
-document.getElementById("weight").value=weight;
-document.getElementById("wd").value=wd;
-document.getElementById("iiw").value=iiw;
 document.getElementById("bid").value=bid;
-document.getElementById("mothertagnumber").value=mothertagnumber;
+document.getElementById("motherTagNumber").value=motherTagNumber;
 document.getElementById("pm").value=pm;
 document.getElementById("dd").value=dd;
-document.getElementById("babyoneweight").value=babyoneweight;
-document.getElementById("babytwoweight").value=babytwoweight;
-document.getElementById("babythreeweight").value=babythreeweight;
-document.getElementById("nobm").value=nobm;
-document.getElementById("nmma").value=nmma;
-document.getElementById("vaccine").value=vaccine;
-document.getElementById("vd").value=vd;
-document.getElementById("nvd").value=nvd;
-document.getElementById("wn").value=wn;
-document.getElementById("ddd").value=ddd;
-document.getElementById("ndd").value=ndd;
+document.getElementById("babyOneWeight").value=babyOneWeight;
+document.getElementById("babyTwoWeight").value=babyTwoWeight;
+document.getElementById("babyThreeweight").value=babyThreeweight;
+document.getElementById("babyOneGender").value=babyOneGender;
+document.getElementById("babyTwoGender").value=babyTwoGender;
+document.getElementById("babyThreeGender").value=babyThreeGender;
+document.getElementById("babyOneStatus").value=babyOneStatus;
+document.getElementById("babyTwoStatus").value=babyTwoStatus;
+document.getElementById("babyThreeStatus").value=babyThreeStatus;
+document.getElementById("etDate").value=etDate;
+document.getElementById("fmdDate").value=fmdDate;
+document.getElementById("pprDate").value=pprDate;
+document.getElementById("poxDate").value=poxDate;
+document.getElementById("wormicideNameOne").value=wormicideNameOne;
+document.getElementById("wormicideNameTwo").value=wormicideNameTwo;
+document.getElementById("wormicideNameThree").value=wormicideNameThree;
+document.getElementById("wormicideNameFour").value=wormicideNameFour;
+document.getElementById("wormicideNameFive").value=wormicideNameFive;
+document.getElementById("wormicideDosingDateOne").value=wormicideDosingDateOne;
+document.getElementById("wormicideDosingDateTwo").value=wormicideDosingDateTwo;
+document.getElementById("wormicideDosingDateThree").value=wormicideDosingDateThree;
+document.getElementById("wormicideDosingDateFour").value=wormicideDosingDateFour;
+document.getElementById("wormicideDosingDateFive").value=wormicideDosingDateFive;
 document.getElementById("rejectable").value=rejectable;
 document.getElementById("sfs").value=sfs;
-document.getElementById("sale").value=sale;
-document.getElementById("died").value=died;
+document.getElementById("saleDate").value=saleDate;
+document.getElementById("saleWeight").value=saleWeight;
+document.getElementById("saleAmount").value=saleAmount;
+document.getElementById("weightOne").value=weightOne;
+document.getElementById("weightTwo").value=weightTwo;
+document.getElementById("weightThree").value=weightThree;
+document.getElementById("weightFour").value=weightFour;
+document.getElementById("weightFive").value=weightFive;
+document.getElementById("weightSix").value=weightSix;
+document.getElementById("weightSeven").value=weightSeven;
+document.getElementById("weightEight").value=weightEight;
+document.getElementById("weightNine").value=weightNine;
+document.getElementById("weightTen").value=weightTen;
+document.getElementById("weightDateOne").value=weightDateOne;
+document.getElementById("weightDateTwo").value=weightDateTwo;
+document.getElementById("weightDateThree").value=weightDateThree;
+document.getElementById("weightDateFour").value=weightDateFour;
+document.getElementById("weightDateFive").value=weightDateFive;
+document.getElementById("weightDateSix").value=weightDateSix;
+document.getElementById("weightDateSeven").value=weightDateSeven;
+document.getElementById("weightDateEight").value=weightDateEight;
+document.getElementById("weightDateNine").value=weightDateNine;
+document.getElementById("weightDateTen").value=weightDateTen;
 };
       
       
-function updateGoat2(id,tagnumber,status,dob,cp,gender,weight,wd,iiw,bid,mothertagnumber,pm,dd,babyoneweight,babytwoweight,babythreeweight,nobm,nmma,vaccine,vd,nvd,wn,ddd,ndd,rejectable,sfs,sale,died){
+function updateGoat2(id,tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,babyOneWeight,babyTwoWeight,babyThreeweight,babyOneGender,babyTwoGender,babyThreeGender,babyOneStatus,babyTwoStatus,babyThreeStatus,etDate,fmdDate,pprDate,poxDate,wormicideNameOne,wormicideNameTwo,wormicideNameThree,wormicideNameFour,wormicideNameFive,wormicideDosingDateOne,wormicideDosingDateTwo,wormicideDosingDateThree,wormicideDosingDateFour,wormicideDosingDateFive,rejectable,sfs,saleDate,saleWeight,saleAmount,weightOne,weightTwo,weightThree,weightFour,weightFive,weightSix,weightSeven,weightEight,weightNine,weightTen,weightDateOne,weightDateTwo,weightDateThree,weightDateFour,weightDateFive,weightDateSix,weightDateSeven,weightDateEight,weightDateNine,weightDateTen){
 var goatUpdated={
      id:id,
-     tagnumber: tagnumber,
-  status: status,
+   tagnumber: tagnumber,
+status: status,
 dob: dob,
 cp: cp,
-gender: gender, 
-weight: weight,
-wd: wd,
-iiw: iiw,
+gender: gender,
 bid: bid,
-mothertagnumber: mothertagnumber,
+motherTagNumber: motherTagNumber,
 pm: pm,
 dd: dd,
-babyoneweight: babyoneweight,
-babytwoweight: babytwoweight,
-babythreeweight: babythreeweight,
-nobm: nobm,
-nmma: nmma,
-vaccine: vaccine,
-vd: vd,
-nvd: nvd,
-wn: wn,
-ddd: ddd,
-ndd: ndd,
+babyOneWeight: babyOneWeight,
+babyTwoWeight: babyTwoWeight,
+babyThreeweight: babyThreeweight,
+babyOneGender: babyOneGender,
+babyTwoGender: babyTwoGender,
+babyThreeGender: babyThreeGender,
+babyOneStatus: babyOneStatus,
+babyTwoStatus: babyTwoStatus,
+babyThreeStatus: babyThreeStatus,
+etDate: etDate,
+fmdDate: fmdDate,
+pprDate: pprDate,
+poxDate: poxDate,
+wormicideNameOne: wormicideNameOne,
+wormicideNameTwo: wormicideNameTwo,
+wormicideNameThree: wormicideNameThree,
+wormicideNameFour: wormicideNameFour,
+wormicideNameFive: wormicideNameFive,
+wormicideDosingDateOne: wormicideDosingDateOne,
+wormicideDosingDateTwo: wormicideDosingDateTwo,
+wormicideDosingDateThree: wormicideDosingDateThree,
+wormicideDosingDateFour: wormicideDosingDateFour,
+wormicideDosingDateFive: wormicideDosingDateFive,
 rejectable: rejectable,
 sfs: sfs,
-sale: sale,
-died: died
+saleDate: saleDate,
+saleWeight: saleWeight,
+saleAmount: saleAmount,
+weightOne: weightOne,
+weightTwo: weightTwo,
+weightThree: weightThree,
+weightFour: weightFour,
+weightFive: weightFive,
+weightSix: weightSix,
+weightSeven: weightSeven,
+weightEight: weightEight,
+weightNine: weightNine,
+weightTen: weightTen,
+weightDateOne: weightDateOne,
+weightDateTwo: weightDateTwo,
+weightDateThree: weightDateThree,
+weightDateFour: weightDateFour,
+weightDateFive: weightDateFive,
+weightDateSix: weightDateSix,
+weightDateSeven: weightDateSeven,
+weightDateEight: weightDateEight,
+weightDateNine: weightDateNine,
+weightDateTen: weightDateTen
    }
    
    let db=firebase.database().ref("/"+id);
