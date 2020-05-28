@@ -791,9 +791,19 @@ function readGoat(){
 <h4><b>DEPOSABLE STATUS</b></h4>
 <p class="card-text">Rejectable: ${userValue.rejectable}</p>
 <p class="card-text">Suitable for Sale: ${userValue.sfs}</p>
-<p class="card-text">Sale Date: ${userValue.saleDate}</p>
-<p class="card-text">Sale Weight: ${userValue.saleWeight}</p>
-<p class="card-text">Sale Amount: ${userValue.saleAmount}</p>
+
+<div class="input-group mb-3">
+      <input type="text" readonly class="form-control" placeholder="Sale Date">
+      <input type="text" readonly class="form-control" placeholder="Sale Weight">
+      <input type="text" readonly class="form-control" placeholder="Sale Amount">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" value="${userValue.saleDate}">
+      <input type="text" readonly class="form-control" value="${userValue.saleWeight}">
+    <input type="text" readonly class="form-control" value="${userValue.saleAmount}">
+    </div>  
+
 <h4><b>WEIGHT RECORDS</b></h4>
 
 <div class="input-group mb-3">
@@ -802,53 +812,53 @@ function readGoat(){
     </div> 
 
     <div class="input-group mb-3">
-      <input type="number" readonly class="form-control" value="${userValue.weightOne}">
-      <input type="date" readonly class="form-control" value="${userValue.weightDateOne}">
+      <input type="text" readonly class="form-control" value="${userValue.weightOne}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateOne}">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" readonly class="form-control" placeholder="${userValue.weightTwo}">
-      <input type="date" readonly class="form-control" placeholder="${userValue.weightDateTwo}">
+      <input type="text" readonly class="form-control" value="${userValue.weightTwo}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateTwo}">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" value="${userValue.weightThree}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateThree}">
+    </div>  
+
+    <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" value="${userValue.weightFour}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateFour}">
     </div> 
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightThree}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateThree}">
-    </div> 
+      <input type="text" readonly class="form-control" value="${userValue.weightFive}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateFive}">
+    </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightFour}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateFour}">
-    </div> 
+      <input type="text" readonly class="form-control" value="${userValue.weightSix}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateSix}">
+    </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightFive}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateFive}">
-    </div> 
+      <input type="text" readonly class="form-control" value="${userValue.weightSeven}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateSeven}">
+    </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightSix}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateSix}">
+      <input type="text" readonly class="form-control" value="${userValue.weightEight}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateEight}">
     </div> 
 
-    <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightSeven}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateSeven}">
-    </div> 
+     <div class="input-group mb-3">
+      <input type="text" readonly class="form-control" value="${userValue.weightNine}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateNine}">
+    </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightEight}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateEight}">
-    </div> 
-
-    <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightNine}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateNine}">
-    </div> 
-
-    <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightTen}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateTen}">
+      <input type="text" readonly class="form-control" value="${userValue.weightTen}">
+      <input type="text" readonly class="form-control" value="${userValue.weightDateTen}">
     </div> 
 
    
