@@ -139,43 +139,14 @@ function convertDate(dateString){
     <nav class="navbar navbar-light bg-light">
 <!--       <a class="nav-link" href="home.html">Back</a> -->
     </nav>
-<!--     <div>
-    <form id="form" action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-   </form> 
-      </div> -->
+
     <div class="container">
     <div class="row">
-<!--     <div class="col-md-6" id="firstSection">
-    <form class="border p-4 mb-4" id="form">
-      
-      <div class="form-group">
-      <label>fname</label>
-      <input type="text" class="form control" id="fname" placeholder="Enter fname">
-      </div>
-      
-      <div class="form-group">
-      <label>lname</label>
-      <input type="text" class="form control" id="lname" placeholder="Enter lname">
-      </div>
-      
-      <button type="submit" id="button1" class="btn btn-primary">Add User</button>
-      <button style="display: none" id="button2" class="btn btn-success">Update User</button>
-      <button style="display: none" id="button3" class="btn btn-danger">Cancel</button>
-      
-      </form>
-      
-      
-    </div> -->
+
     <div class="col-md-6" id="cardSection"></div>
       
        <div class="btn-floating-container">
         
-<!--        <button style='font-size:24px;color:blue'><i class='fas fa-plus'></i></button> -->
        <button type="button" style='font-size:24px;color:blue' data-toggle="modal" data-target="#exampleModal"><i class='fas fa-plus'></i></button>
        
     </div>
@@ -192,19 +163,7 @@ function convertDate(dateString){
         </button>
       </div>
       <div class="modal-body">
-<!--         <form id="form">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">First name:</label>
-            <input type="text" class="form-control" id="faname">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Last name:</label>
-            <input type="text" class="form-control" id="laname">
-            <div class="modal-footer">
-           <button type="submit" id="button1" class="btn btn-primary" onclick="addUser()">Add User</button>
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-           </div>
-        </form> -->
+
         
         <form id="form">
 <b>GOAT GENERAL DETAILS</b>
@@ -240,21 +199,6 @@ function convertDate(dateString){
       <input type="number" class="form-control" id="cpa">
     </div>
   </div>
-  
-<!--    <div class="form-group row">
-    <label for="gender" class="col-sm-2 col-form-label">Gender</label>
-    <div class="btn-group" id="gender" data-toggle="buttons">
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="F">Female
-   </label>
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="MA"> Male Andul
-   </label>
-   <label class="btn btn-default blue">
-     <input type="radio" class="toggle" name="toggle" value="MK"> Male Khassi
-   </label>
-</div>
-  </div> -->
         
  <div class="form-group row">
     <label for="gender" class="col-sm-2 col-form-label">Gender</label>
@@ -392,6 +336,7 @@ function convertDate(dateString){
     
   <div class="input-group mb-3">
        <select id="wna" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
     <option value="hitek">hitek f inj</option>
@@ -409,24 +354,7 @@ function convertDate(dateString){
         
   <div class="input-group mb-3">
        <select id="wna" class="form-control" name="wn">
-    <option value="ivermectin">ivermectin</option>
-    <option value="fenbendazole">fenbendazole</option>
-    <option value="hitek">hitek f inj</option>
-    <option value="albendazole">albendazole</option>
-     <option value="nilzan">nilzan</option>
-    <option value="levamisole">levamisole</option>
-    <option value="oxycclanazide">oxycclanazide</option>
-    <option value="closantel">closantel</option>
-     <option value="triclabendazole">triclabendazole</option>
-    <option value="bandykind">bandykind</option>
-    <option value="praziquintal">praziquintal</option>
-  </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
-  </div> 
-    
-        
-  <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
     <option value="hitek">hitek f inj</option>
@@ -445,6 +373,7 @@ function convertDate(dateString){
         
   <div class="input-group mb-3">
        <select id="wna" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
     <option value="hitek">hitek f inj</option>
@@ -463,6 +392,26 @@ function convertDate(dateString){
         
   <div class="input-group mb-3">
        <select id="wna" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" placeholder="Dosing date">
+  </div> 
+    
+        
+  <div class="input-group mb-3">
+       <select id="wna" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
     <option value="hitek">hitek f inj</option>
