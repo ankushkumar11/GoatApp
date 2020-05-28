@@ -739,39 +739,20 @@ function readGoat(){
 <p class="card-text">Sale Weight: ${userValue.saleWeight}</p>
 <p class="card-text">Sale Amount: ${userValue.saleAmount}</p>
 <h4><b>WEIGHT RECORDS</b></h4>
-<p class="card-text">Weight: ${userValue.weightOne}</p>
-<p class="card-text">Date: ${userValue.weightDateOne}</p>
-<p class="card-text">Weight: ${userValue.weightTwo}</p>
-<p class="card-text">Date: ${userValue.weightDateTwo}</p>
-<p class="card-text">Weight: ${userValue.weightThree}</p>
-<p class="card-text">Date: ${userValue.weightDateThree}</p>
-<p class="card-text">Weight: ${userValue.weightFour}</p>
-<p class="card-text">Date: ${userValue.weightDateFour}</p>
-<p class="card-text">Weight: ${userValue.weightFive}</p>
-<p class="card-text">Date: ${userValue.weightDateFive}</p>
-<p class="card-text">Weight: ${userValue.weightSix}</p>
-<p class="card-text">Date: ${userValue.weightDateSix}</p>
-<p class="card-text">Weight: ${userValue.weightSeven}</p>
-<p class="card-text">Date: ${userValue.weightDateSeven}</p>
-<p class="card-text">Weight: ${userValue.weightEight}</p>
-<p class="card-text">Date: ${userValue.weightDateEight}</p>
-<p class="card-text">Weight: ${userValue.weightNine}</p>
-<p class="card-text">Date: ${userValue.weightDateNine}</p>
-<p class="card-text">Weight: ${userValue.weightTen}</p>
-<p class="card-text">Date: ${userValue.weightDateTen}</p>
+
 <div class="input-group mb-3">
       <input type="text" readonly class="form-control" placeholder="weight(in kg)">
       <input type="text" readonly class="form-control" placeholder="date">
     </div> 
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightOne}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateOne}">
+      <input type="number" readonly class="form-control" value="${userValue.weightOne}">
+      <input type="date" readonly class="form-control" value="${userValue.weightDateOne}">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" placeholder="${userValue.weightTwo}">
-      <input type="date" class="form-control" placeholder="${userValue.weightDateTwo}">
+      <input type="number" readonly class="form-control" placeholder="${userValue.weightTwo}">
+      <input type="date" readonly class="form-control" placeholder="${userValue.weightDateTwo}">
     </div> 
 
     <div class="input-group mb-3">
