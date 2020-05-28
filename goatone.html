@@ -221,7 +221,7 @@ function convertDate(dateString){
    <div class="form-group row">
     <label for="mothertagnumber" class="col-sm-2 col-form-label">Mother Tag Number</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="mothertagnumbera">
+      <input type="text" class="form-control" id="motherTagNumbera">
     </div>
   </div>
   
@@ -250,39 +250,39 @@ function convertDate(dateString){
     </div>
   
     <div class="input-group mb-3">
-      <input type="date" class="form-control" id="saledate" placeholder="weight(in kg)">
-        <select id="gendera" class="form-control" name="gender">
+      <input type="date" class="form-control" id="babyOneWeighta" placeholder="weight(in kg)">
+        <select id="babyOneGendera" class="form-control" name="gender">
     <option value="F">Female</option>
     <option value="MA">Male Andul</option>
     <option value="MK">Male Khassi</option>
   </select>
-       <select id="statusa" class="form-control" name="status">
+       <select id="babyOneStatusa" class="form-control" name="status">
     <option value="alive">Alive</option>
     <option value="died">Died</option>
   </select>
     </div> 
     
    <div class="input-group mb-3">
-      <input type="date" class="form-control" id="saledate" placeholder="weight(in kg)">
-        <select id="gendera" class="form-control" name="gender">
+      <input type="date" class="form-control" id="babyTwoWeighta" placeholder="weight(in kg)">
+        <select id="babyTwoGendera" class="form-control" name="gender">
     <option value="F">Female</option>
     <option value="MA">Male Andul</option>
     <option value="MK">Male Khassi</option>
   </select>
-       <select id="statusa" class="form-control" name="status">
+       <select id="babyTwoStatusa" class="form-control" name="status">
     <option value="alive">Alive</option>
     <option value="died">Died</option>
   </select>
     </div> 
     
   <div class="input-group mb-3">
-      <input type="date" class="form-control" id="saledate" placeholder="weight(in kg)">
-        <select id="gendera" class="form-control" name="gender">
+      <input type="date" class="form-control" id="babyThreeweighta" placeholder="weight(in kg)">
+        <select id="babyThreeGendera" class="form-control" name="gender">
     <option value="F">Female</option>
     <option value="MA">Male Andul</option>
     <option value="MK">Male Khassi</option>
   </select>
-       <select id="statusa" class="form-control" name="status">
+       <select id="babyThreeStatusa" class="form-control" name="status">
     <option value="alive">Alive</option>
     <option value="died">Died</option>
   </select>
@@ -301,28 +301,28 @@ function convertDate(dateString){
     <div class="input-group-prepend">
       <span class="input-group-text">ET</span>
     </div>
-      <input type="date" class="form-control" placeholder="date">
+      <input type="date" class="form-control" id="etDatea" placeholder="date">
     </div> 
       
          <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text">FMD</span>
     </div>
-      <input type="date" class="form-control" placeholder="date">
+      <input type="date" class="form-control" id="fmdDatea" placeholder="date">
     </div> 
       
          <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text">PPR</span>
     </div>
-      <input type="date" class="form-control" placeholder="date">
+      <input type="date" class="form-control" id="pprDatea" placeholder="date">
     </div> 
       
          <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text">POX</span>
     </div>
-      <input type="date" class="form-control" placeholder="date">
+      <input type="date" class="form-control" id="poxDatea" placeholder="date">
     </div> 
 
 <br></br>
@@ -335,7 +335,7 @@ function convertDate(dateString){
   </div> 
     
   <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
+       <select id="wormicideNameOnea" class="form-control" name="wn">
          <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
@@ -349,11 +349,11 @@ function convertDate(dateString){
     <option value="bandykind">bandykind</option>
     <option value="praziquintal">praziquintal</option>
   </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
+      <input type="date"class="form-control" id="wormicideDosingDateOnea" placeholder="Dosing date">
   </div> 
         
   <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
+       <select id="wormicideNameTwoa" class="form-control" name="wn">
          <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
@@ -367,31 +367,12 @@ function convertDate(dateString){
     <option value="bandykind">bandykind</option>
     <option value="praziquintal">praziquintal</option>
   </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
-  </div> 
-    
-        
-  <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
-         <option value="none" selected disabled hidden>Select</option> 
-    <option value="ivermectin">ivermectin</option>
-    <option value="fenbendazole">fenbendazole</option>
-    <option value="hitek">hitek f inj</option>
-    <option value="albendazole">albendazole</option>
-     <option value="nilzan">nilzan</option>
-    <option value="levamisole">levamisole</option>
-    <option value="oxycclanazide">oxycclanazide</option>
-    <option value="closantel">closantel</option>
-     <option value="triclabendazole">triclabendazole</option>
-    <option value="bandykind">bandykind</option>
-    <option value="praziquintal">praziquintal</option>
-  </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
+      <input type="date"class="form-control" id="wormicideDosingDateTwoa" placeholder="Dosing date">
   </div> 
     
         
   <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
+       <select id="wormicideNameThreea" class="form-control" name="wn">
          <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
@@ -405,12 +386,12 @@ function convertDate(dateString){
     <option value="bandykind">bandykind</option>
     <option value="praziquintal">praziquintal</option>
   </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
+      <input type="date"class="form-control" id="wormicideDosingDateThreea" placeholder="Dosing date">
   </div> 
     
         
   <div class="input-group mb-3">
-       <select id="wna" class="form-control" name="wn">
+       <select id="wormicideNameFoura" class="form-control" name="wn">
          <option value="none" selected disabled hidden>Select</option> 
     <option value="ivermectin">ivermectin</option>
     <option value="fenbendazole">fenbendazole</option>
@@ -424,7 +405,26 @@ function convertDate(dateString){
     <option value="bandykind">bandykind</option>
     <option value="praziquintal">praziquintal</option>
   </select>
-      <input type="date"class="form-control" placeholder="Dosing date">
+      <input type="date"class="form-control" id="wormicideDosingDateFoura" placeholder="Dosing date">
+  </div> 
+    
+        
+  <div class="input-group mb-3">
+       <select id="wormicideNameFivea" class="form-control" name="wn">
+         <option value="none" selected disabled hidden>Select</option> 
+    <option value="ivermectin">ivermectin</option>
+    <option value="fenbendazole">fenbendazole</option>
+    <option value="hitek">hitek f inj</option>
+    <option value="albendazole">albendazole</option>
+     <option value="nilzan">nilzan</option>
+    <option value="levamisole">levamisole</option>
+    <option value="oxycclanazide">oxycclanazide</option>
+    <option value="closantel">closantel</option>
+     <option value="triclabendazole">triclabendazole</option>
+    <option value="bandykind">bandykind</option>
+    <option value="praziquintal">praziquintal</option>
+  </select>
+      <input type="date"class="form-control" id="wormicideDosingDateFivea" placeholder="Dosing date">
   </div> 
   
 <br></br>
@@ -453,9 +453,9 @@ function convertDate(dateString){
     </div>
   
     <div class="input-group mb-3">
-      <input type="date" class="form-control" id="saledate" placeholder="date">
-      <input type="number" class="form-control" id="saleweight" placeholder="weight(in kg)">
-      <input type="number" class="form-control" id="saleamount" placeholder="amount">
+      <input type="date" class="form-control" id="saleDatea" placeholder="date">
+      <input type="number" class="form-control" id="saleWeighta" placeholder="weight(in kg)">
+      <input type="number" class="form-control" id="saleAmounta" placeholder="amount">
     </div> 
 
 <br></br>
@@ -468,53 +468,53 @@ function convertDate(dateString){
     </div> 
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightone" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="dateone" placeholder="date">
+      <input type="number" class="form-control" id="weightOnea" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateOnea" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weighttwo" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datetwo" placeholder="date">
+      <input type="number" class="form-control" id="weightTwoa" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateTwoa" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightthree" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datethree" placeholder="date">
+      <input type="number" class="form-control" id="weightThreea" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateThreea" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightfour" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datefour" placeholder="date">
+      <input type="number" class="form-control" id="weightFoura" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateFoura" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightfive" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datefive" placeholder="date">
+      <input type="number" class="form-control" id="weightFivea" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateFivea" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightsix" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datesix" placeholder="date">
+      <input type="number" class="form-control" id="weightSixa" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateSixa" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightseven" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="dateseven" placeholder="date">
+      <input type="number" class="form-control" id="weightSevena" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateSevena" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weighteight" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="dateeight" placeholder="date">
+      <input type="number" class="form-control" id="weightEighta" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateEighta" placeholder="date">
     </div>  
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightnine" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="datenine" placeholder="date">
+      <input type="number" class="form-control" id="weightNinea" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateNinea" placeholder="date">
     </div> 
 
     <div class="input-group mb-3">
-      <input type="number" class="form-control" id="weightten" placeholder="weight(in kg)">
-      <input type="date" class="form-control" id="dateten" placeholder="date">
+      <input type="number" class="form-control" id="weightTena" placeholder="weight(in kg)">
+      <input type="date" class="form-control" id="weightDateTena" placeholder="date">
     </div>
 
 <div class="modal-footer">
