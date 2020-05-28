@@ -707,15 +707,15 @@ function readGoat(){
 <p class="card-text">Pregnancy month: ${userValue.pm}</p>
 <h4><b>PRODUCTION DETAILS</b></h4>
 <p class="card-text">Delivery date: ${userValue.dd}</p>
-<p class="card-text">1st Baby weight: (in kg)${userValue.babyOneWeight}</p>
-<p class="card-text">2nd Baby weight: (in kg)${userValue.babyTwoWeight}</p>
-<p class="card-text">3rd Baby weight: (in kg)${userValue.babyThreeweight}</p>
-<p class="card-text">1st Baby gender: (in kg)${userValue.babyOneGender}</p>
-<p class="card-text">2nd Baby gender: (in kg)${userValue.babyTwoGender}</p>
-<p class="card-text">3rd Baby gender: (in kg)${userValue.babyThreeGender}</p>
-<p class="card-text">1st Baby status: (in kg)${userValue.babyOneStatus}</p>
-<p class="card-text">2nd Baby status: (in kg)${userValue.babyTwoStatus}</p>
-<p class="card-text">3rd Baby status: (in kg)${userValue.babyThreeStatus}</p>
+<p class="card-text">1st Baby weight(in kg): ${userValue.babyOneWeight}</p>
+<p class="card-text">2nd Baby weight(in kg): ${userValue.babyTwoWeight}</p>
+<p class="card-text">3rd Baby weight(in kg): (in kg)${userValue.babyThreeweight}</p>
+<p class="card-text">1st Baby gender: ${userValue.babyOneGender}</p>
+<p class="card-text">2nd Baby gender: ${userValue.babyTwoGender}</p>
+<p class="card-text">3rd Baby gender: ${userValue.babyThreeGender}</p>
+<p class="card-text">1st Baby status: ${userValue.babyOneStatus}</p>
+<p class="card-text">2nd Baby status: ${userValue.babyTwoStatus}</p>
+<p class="card-text">3rd Baby status: ${userValue.babyThreeStatus}</p>
 <h4><b>VACCINATION DETAILS</b></h4>
 <p class="card-text">ET: ${userValue.etDate}</p>
 <p class="card-text">FMD: ${userValue.fmdDate}</p>
@@ -1189,6 +1189,7 @@ function updateGoat(id,tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,
       }); 
   
 document.getElementById("tagnumber").value=tagnumber;
+  console.log(tagnumber);
 document.getElementById("status").value=status;
 document.getElementById("dob").value=dob;
 document.getElementById("cp").value=cp;
