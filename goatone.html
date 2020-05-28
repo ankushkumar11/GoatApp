@@ -715,22 +715,22 @@ function readGoat(){
   
     <div class="input-group mb-3">
       <input type="number" readonly class="form-control" value="${userValue.babyOneWeight}">
-        <select readonly class="form-control" name="gender">
-    <option value="${userValue.babyOneGender}">${userValue.babyOneGender}</option>
-  </select>
-       <select readonly class="form-control" name="status">
-    <option value="${userValue.babyOneStatus}">${userValue.babyOneStatus}</option>
-  </select>
+<input type="text" readonly class="form-control" value="${userValue.babyOneGender}">
+<input type="text" readonly class="form-control" value="${userValue.babyOneStatus}">
     </div> 
-<p class="card-text">1st Baby weight(in kg): ${userValue.babyOneWeight}</p>
-<p class="card-text">2nd Baby weight(in kg): ${userValue.babyTwoWeight}</p>
-<p class="card-text">3rd Baby weight(in kg): ${userValue.babyThreeweight}</p>
-<p class="card-text">1st Baby gender: ${userValue.babyOneGender}</p>
-<p class="card-text">2nd Baby gender: ${userValue.babyTwoGender}</p>
-<p class="card-text">3rd Baby gender: ${userValue.babyThreeGender}</p>
-<p class="card-text">1st Baby status: ${userValue.babyOneStatus}</p>
-<p class="card-text">2nd Baby status: ${userValue.babyTwoStatus}</p>
-<p class="card-text">3rd Baby status: ${userValue.babyThreeStatus}</p>
+
+   <div class="input-group mb-3">
+      <input type="number" readonly class="form-control" value="${userValue.babyTwoWeight}">
+<input type="text" readonly class="form-control" value="${userValue.babyTwoGender}">
+<input type="text" readonly class="form-control" value="${userValue.babyTwoStatus}">
+    </div> 
+
+   <div class="input-group mb-3">
+      <input type="number" readonly class="form-control" value="${userValue.babyThreeweight}">
+<input type="text" readonly class="form-control" value="${userValue.babyThreeGender}">
+<input type="text" readonly class="form-control" value="${userValue.babyThreeStatus}">
+    </div> 
+
 <h4><b>VACCINATION DETAILS</b></h4>
 <p class="card-text">ET: ${userValue.etDate}</p>
 <p class="card-text">FMD: ${userValue.fmdDate}</p>
