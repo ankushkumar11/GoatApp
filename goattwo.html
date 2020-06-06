@@ -913,7 +913,7 @@ function readGoat(){
         </button>
       </div>
       <div class="modal-body">
-       <form id="form2">
+       <form id="form_${userValue.tagnumber}">
 <b>GOAT GENERAL DETAILS</b>
 <br></br>
   <div class="form-group row">
@@ -1301,7 +1301,7 @@ function updateGoat(id,tagnumber,status,dob,cp,gender,bid,motherTagNumber,pm,dd,
 console.log("update1");
   console.log(tagnumber);
 
-    document.getElementById("form2").addEventListener("submit",(e)=>{
+    document.getElementById("form_${userValue.tagnumber}").addEventListener("submit",(e)=>{
         e.preventDefault();
       });  
   
