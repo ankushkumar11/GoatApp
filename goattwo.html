@@ -873,8 +873,8 @@ function readGoat(){
     </div> 
 
    
-        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#deleteModal" onclick="delGoat(${userValue.id})">Delete Goat</button> 
-<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <button type="submit" style="color:white" class="btn btn-danger"  data-toggle="modal" data-target="#delete_${userValue.tagnumber}" onclick="delGoat(${userValue.id})">Delete Goat</button> 
+<div class="modal fade" id="delete_${userValue.tagnumber}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -900,10 +900,10 @@ function readGoat(){
 
 
 
-        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.status}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.bid}','${userValue.motherTagNumber}','${userValue.pm}','${userValue.dd}','${userValue.babyOneWeight}','${userValue.babyTwoWeight}','${userValue.babyThreeweight}','${userValue.babyOneGender}','${userValue.babyTwoGender}','${userValue.babyThreeGender}','${userValue.babyOneStatus}','${userValue.babyTwoStatus}','${userValue.babyThreeStatus}','${userValue.etDate}','${userValue.fmdDate}','${userValue.pprDate}','${userValue.poxDate}','${userValue.wormicideNameOne}','${userValue.wormicideNameTwo}','${userValue.wormicideNameThree}','${userValue.wormicideNameFour}','${userValue.wormicideNameFive}','${userValue.wormicideDosingDateOne}','${userValue.wormicideDosingDateTwo}','${userValue.wormicideDosingDateThree}','${userValue.wormicideDosingDateFour}','${userValue.wormicideDosingDateFive}','${userValue.rejectable}','${userValue.sfs}','${userValue.saleDate}','${userValue.saleWeight}','${userValue.saleAmount}','${userValue.weightOne}','${userValue.weightTwo}','${userValue.weightThree}','${userValue.weightFour}','${userValue.weightFive}','${userValue.weightSix}','${userValue.weightSeven}','${userValue.weightEight}','${userValue.weightNine}','${userValue.weightTen}','${userValue.weightDateOne}','${userValue.weightDateTwo}','${userValue.weightDateThree}','${userValue.weightDateFour}','${userValue.weightDateFive}','${userValue.weightDateSix}','${userValue.weightDateSeven}','${userValue.weightDateEight}','${userValue.weightDateNine}','${userValue.weightDateTen}')" data-toggle="modal" data-target="#editModal">Update Goat</button>
+        <button type="submit" style="color:white" class="btn btn-warning" onclick="updateGoat(${userValue.id},'${userValue.tagnumber}','${userValue.status}','${userValue.dob}','${userValue.cp}','${userValue.gender}','${userValue.bid}','${userValue.motherTagNumber}','${userValue.pm}','${userValue.dd}','${userValue.babyOneWeight}','${userValue.babyTwoWeight}','${userValue.babyThreeweight}','${userValue.babyOneGender}','${userValue.babyTwoGender}','${userValue.babyThreeGender}','${userValue.babyOneStatus}','${userValue.babyTwoStatus}','${userValue.babyThreeStatus}','${userValue.etDate}','${userValue.fmdDate}','${userValue.pprDate}','${userValue.poxDate}','${userValue.wormicideNameOne}','${userValue.wormicideNameTwo}','${userValue.wormicideNameThree}','${userValue.wormicideNameFour}','${userValue.wormicideNameFive}','${userValue.wormicideDosingDateOne}','${userValue.wormicideDosingDateTwo}','${userValue.wormicideDosingDateThree}','${userValue.wormicideDosingDateFour}','${userValue.wormicideDosingDateFive}','${userValue.rejectable}','${userValue.sfs}','${userValue.saleDate}','${userValue.saleWeight}','${userValue.saleAmount}','${userValue.weightOne}','${userValue.weightTwo}','${userValue.weightThree}','${userValue.weightFour}','${userValue.weightFive}','${userValue.weightSix}','${userValue.weightSeven}','${userValue.weightEight}','${userValue.weightNine}','${userValue.weightTen}','${userValue.weightDateOne}','${userValue.weightDateTwo}','${userValue.weightDateThree}','${userValue.weightDateFour}','${userValue.weightDateFive}','${userValue.weightDateSix}','${userValue.weightDateSeven}','${userValue.weightDateEight}','${userValue.weightDateNine}','${userValue.weightDateTen}')" data-toggle="modal" data-target="#edit_${userValue.tagnumber}">Update Goat</button>
 
 
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+<div class="modal fade" id="edit_${userValue.tagnumber}" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
