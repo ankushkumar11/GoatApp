@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getTime()</h2>
+
+<p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+<p>The getTime() function returns the number of milliseconds since then:</p>
+
+
+<p id="dob"></p>
+<button onclick="add('dob')">load</button>
+
+<button onclick="two('dob')">Submit</button>
+
+<button onclick="three('dob')">Update</button>
+
+<button onclick="two('dob')">Save</button>
+
+
+
+<script>
+function add(test){
+document.getElementById("dob").innerHTML=`
+<input id="${test}-dd" type="number" placeholder="DD"/>
+<input id="${test}-mm" type="number" placeholder="MM"/>
+<input id="${test}-yy" type="number" placeholder="YYYY"/>
+`;
+};
+
+function two(test){
+console.log(test.concat('-dd'));
+var dd=document.getElementById(test.concat('-dd')).value;
+var mm=document.getElementById(test.concat('-mm')).value;
+var yy=document.getElementById(test.concat('-yy')).value;
+var samdate = dd+'/'+mm+'/'+yy;
+var d = new Date(yy, mm, dd);
+document.getElementById(test).innerHTML = samdate;
+};
+
+function three(test){
+
+
+console.log("========");
+
+var res = "23/11/2012".split("/");
+console.log(res);
+
+console.log("========");
+
+document.getElementById(test).innerHTML=`
+<input id="${test}-dd" type="number" placeholder="DD"/>
+<input id="${test}-mm" type="number" placeholder="MM"/>
+<input id="${test}-yy" type="number" placeholder="YYYY"/>
+`;
+
+document.getElementById(test.concat('-dd')).value=res[0];
+document.getElementById(test.concat('-mm')).value=res[1];
+document.getElementById(test.concat('-yy')).value=res[2];
+
+};
+</script>
+
+</body>
+</html>
